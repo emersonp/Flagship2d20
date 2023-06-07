@@ -2,10 +2,10 @@
 import { FlagshipActor } from "./documents/actor.mjs";
 import { FlagshipItem } from "./documents/item.mjs";
 // Import sheet classes.
-import { ACActorSheet } from "./sheets/actor-sheet.mjs";
-import { ACNPCSheet } from "./sheets/npc-sheet.mjs";
-import { ACVehicleSheet } from "./sheets/vehicle-sheet.mjs";
-import { ACItemSheet } from "./sheets/item-sheet.mjs";
+import { FlagshipActorSheet } from "./sheets/actor-sheet.mjs";
+import { FlagshipNPCSheet } from "./sheets/npc-sheet.mjs";
+import { FlagshipVehicleSheet } from "./sheets/vehicle-sheet.mjs";
+import { FlagshipItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { Flagship2d20 } from "./helpers/config.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";

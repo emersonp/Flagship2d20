@@ -1,21 +1,19 @@
 export const Flagship2d20 = {};
 
 Flagship2d20.attributes = {
-  "agi": "Flagship2d20.AbilityAgi",
-  "bra": "Flagship2d20.AbilityBra",
-  "coo": "Flagship2d20.AbilityCoo",
-  "ins": "Flagship2d20.AbilityIns",
-  "rea": "Flagship2d20.AbilityRea",
-  "wil": "Flagship2d20.AbilityWil",
+  "foc": "Flagship2d20.AbilityFoc",
+  "ner": "Flagship2d20.AbilityNer",
+  "phy": "Flagship2d20.AbilityPhy",
+  "pre": "Flagship2d20.AbilityPre",
+  "sha": "Flagship2d20.AbilitySha",
 };
 
 Flagship2d20.abilityAbbreviations = {
-  "agi": "Flagship2d20.AbilityAgiAbr",
-  "bra": "Flagship2d20.AbilityBraAbr",
-  "coo": "Flagship2d20.AbilityCooAbr",
-  "ins": "Flagship2d20.AbilityInsAbr",
-  "rea": "Flagship2d20.AbilityReaAbr",
-  "wil": "Flagship2d20.AbilityWilAbr",
+  "foc": "Flagship2d20.AbilityFocAbr",
+  "ner": "Flagship2d20.AbilityNerAbr",
+  "phy": "Flagship2d20.AbilityPhyAbr",
+  "pre": "Flagship2d20.AbilityPreAbr",
+  "sha": "Flagship2d20.AbilityShaAbr",
 };
 
 Flagship2d20.SKILLS = [
@@ -95,15 +93,15 @@ Flagship2d20.WEAPONS = {
   "weaponTypes": [
     {
       'label': "Melee",
-      'bonusAttribute': 'agi'
+      'bonusAttribute': 'pre'
     },
     {
       'label': "Ranged",
-      'bonusAttribute': 'coo'
+      'bonusAttribute': 'ner'
     },
     {
       'label': "Mental",
-      'bonusAttribute': 'wil'
+      'bonusAttribute': 'foc'
     }
   ]
 }

@@ -120,37 +120,49 @@ export const registerHandlebarsHelpers = function () {
 
     Handlebars.registerHelper('isCreaturesWeapon', function (weapon) {
         if (weapon.system.weaponType == "creatureAttack" || weapon.actor?.type == "creature")
+        {
             return true;
+        }
         else
+        {
             return false;
+        }
     });
 
     Handlebars.registerHelper('isWeaponUsingMeleeBonus', function (weapon, actor) {
         if ((weapon.weaponType == "unarmed" || weapon.weaponType == "meleeWeapons") && actor?.type != "creature")
+        {
             return true;
+        }
         else
-            return false;
+        {
+            return false;   
+        }
     });
 
     Handlebars.registerHelper('hasInjury', function (txt) {
         if (txt.length > 0)
+        {
             return true;
+        }
         else
+        {
             return false;
+        }
     });
 
     Handlebars.registerHelper('getAttributeBonus', function (actor, weaponType) {
-        if (weaponType == 'agi')
+        if (weaponType == 'phy')
         {
-            return actor.system.attributes['bra'].bonus;
+            return actor.system.attributes['ner'].bonus;
         }
-        else if (weaponType == 'coo')
+        else if (weaponType == 'ner')
         {
-            return actor.system.attributes['ins'].bonus;
+            return actor.system.attributes['sha'].bonus;
         }
-        else if (weaponType == 'wil')
+        else if (weaponType == 'foc')
         {
-            return actor.system.attributes['wil'].bonus;
+            return actor.system.attributes['foc'].bonus;
         }
     });
 

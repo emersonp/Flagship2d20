@@ -136,7 +136,9 @@ export class FlagshipActorSheet extends ActorSheet {
         }
 
         if (totalEncumbrance > this.actor.system.carryCapacity.value)
+        {
             isEncumbered = true;
+        }
 
         context.totalEncumbrance = totalEncumbrance;
         context.isEncumbered = isEncumbered;
@@ -255,10 +257,14 @@ export class FlagshipActorSheet extends ActorSheet {
             let attribute = this.actor.system.attributes[attr];
             let complication = 20;
             if (this.actor.type == 'character')
+            {
                 complication -= this.actor.getComplicationFromInjuries();
+            }
 
             if (this.actor.type == 'npc' || this.actor.type == 'vehicle')
+            {
                 complication -= this.actor.system.injuries.value;
+            }
 
             const attrName = game.i18n.localize('FLAGSHIP2D20.Ability.' + attr);
             game.flagship2d20.Dialog2d20.createDialog({ rollName: `Roll ${attrName}`, diceNum: 2, attribute: attribute.value, skill: 0, focus: false, complication: complication })
@@ -416,12 +422,18 @@ export class FlagshipActorSheet extends ActorSheet {
             const item = this.actor.items.get(li.data("itemId"));
             const itemId = li.data("itemId");
             let stressBonus = 0;
-            if (item.system.weaponType == 'agi')
-                stressBonus = item.actor.system.attributes['bra'].bonus;
-            else if (item.system.weaponType == 'coo')
-                stressBonus = item.actor.system.attributes['ins'].bonus;
-            else if (item.system.weaponType == 'wil')
-                stressBonus = item.actor.system.attributes['wil'].bonus;
+            if (item.system.weaponType == 'phy')
+            {
+                stressBonus = item.actor.system.attributes['ner'].bonus;
+            }
+            else if (item.system.weaponType == 'ner')
+            {
+                stressBonus = item.actor.system.attributes['sha'].bonus;
+            }
+            else if (item.system.weaponType == 'foc')
+            {
+                stressBonus = item.actor.system.attributes['foc'].bonus;
+            }
             let stress = parseInt(item.system.stress) + parseInt(stressBonus);
             game.flagship2d20.DialogD6.createDialog({ rollName: item.name, diceNum: stress, flagship2d20Roll: null, itemId: itemId, actorId: this.actor._id })
         })

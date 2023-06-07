@@ -37,27 +37,23 @@
 			},
 			"stats": {
 				"attributes": {
-					"agi": {
+					"foc": {
 						"value": 6,
 						"bonus":0
 					},
-					"bra": {
+					"ner": {
 						"value": 6,
 						"bonus":0
 					},
-					"coo": {
+					"phy": {
 						"value": 6,
 						"bonus":0
 					},
-					"ins": {
+					"pre": {
 						"value": 6,
 						"bonus":0
 					},
-					"rea": {
-						"value": 6,
-						"bonus":0
-					},
-					"wil": {
+					"sha": {
 						"value": 6,
 						"bonus":0
 					}
@@ -155,7 +151,7 @@
 			"templates": ["base"],
 			"value": 0,
 			"focuses": [],
-			"defaultAttribute": "agi",
+			"defaultAttribute": "foc",
 			"summary": ""
 		},
 		"talent":{
@@ -195,7 +191,7 @@
 		"weapon": {
 			"templates": ["base", "physical", "equipable"],
 			"melee": false,
-			"weaponType": "agi",
+			"weaponType": "foc",
 			"range":"close",
 			"focus":"",
 			"stress":0,

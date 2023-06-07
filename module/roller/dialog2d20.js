@@ -53,7 +53,7 @@ export class Dialog2d20 extends Dialog {
         dialogData.skill = skill;
         dialogData.focus = focus;
         dialogData.complication = complication;
-        dialogData.attributes = ['agi', 'bra', 'coo', 'ins', 'rea', 'wil'];
+        dialogData.attributes = ['foc', 'ner', 'phy', 'pre', 'sha'];
         dialogData.actor = actor;
         dialogData.prefAttribute = prefAttribute;
         dialogData.actorId = actorId;

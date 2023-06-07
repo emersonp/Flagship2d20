@@ -136,7 +136,7 @@ export class FlagshipActor extends Actor {
     getRollShortcuts() {
         let out = {};
         // Attributes
-        for (const name of ["bra", "agi", "coo", "rea", "ins", "wil"]) {
+        for (const name of ["foc", "ner", "phy", "pre", "sha"]) {
             out[name.substring(0, 3)] = this.system.attributes[name].value;
         }
         // Power

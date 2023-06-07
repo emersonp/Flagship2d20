@@ -1,8 +1,8 @@
 {
   "id": "flagship2d20",
-  "title": "Parker's House 2d20",
+  "title": "Flagship 2d20",
   "description": "The official 2d20 System for Parker for FoundryVTT",
-  "version": "1.0.4",
+  "version": "1.0.10",
   "compatibility": {
     "minimum": "10",
     "verified": "10",
@@ -46,12 +46,6 @@
       "name": "English",
       "path": "lang/en.json",
       "flags": {}
-    },
-    {
-      "lang": "es",
-      "name": "Español",
-      "path": "lang/es.json",
-      "flags": {}
     }
   ],
   "socket": true,
@@ -59,5 +53,5 @@
   "gridUnits": "m",
   "url": "https://github.com/emersonp/parker2d20",
   "manifest": "https://github.com/emersonp/parker2d20/releases/latest/download/system.json",
-  "download": "https://github.com/emersonp/parker2d20/releases/download/v1.0.9/parker2d20.zip"
+  "download": "https://github.com/emersonp/parker2d20/releases/download/v1.0.10/parker2d20.zip"
 }

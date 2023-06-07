@@ -326,7 +326,9 @@ export class FlagshipActorSheet extends ActorSheet {
             const skillName = item.system.skill;
             const focusName = item.system.focus;
             if (!skillName)
+            {
                 return;
+            }
 
             const skill = this.actor.items.getName(skillName);
             let skillRank = 0;

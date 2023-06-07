@@ -17,12 +17,12 @@ export class FlagshipActor extends Actor {
         
         // Carry capacity
         let carryCapacity = 6;
-        if(this.system.attributes.bra.value < 9){
+        if(this.system.attributes.phy.value < 9){
             carryCapacity = 6
-        }else if(this.system.attributes.bra.value == 9){
+        }else if(this.system.attributes.phy.value == 9){
             carryCapacity = 7
         }
-        else if(this.system.attributes.bra.value == 10 || this.system.attributes.bra.value == 11){
+        else if(this.system.attributes.phy.value == 10 || this.system.attributes.phy.value == 11){
             carryCapacity = 8
         }else{
             carryCapacity = 9
@@ -77,7 +77,7 @@ export class FlagshipActor extends Actor {
     _getCharacterRollData(data) {
         if (this.type !== 'character') return;
         // Copy the ability scores to the top level, so that rolls can use
-        // formulas like `@bra.value + 4`.
+        // formulas like `@phy.value + 4`.
         if (data.attributes) {
             for (let [k, v] of Object.entries(data.attributes)) {
                 data[k] = foundry.utils.deepClone(v);

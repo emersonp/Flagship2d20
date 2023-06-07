@@ -342,11 +342,16 @@ export class FlagshipActorSheet extends ActorSheet {
             } catch (err) { }
 
             const attrValue = -1;
-            let prefAttribute = "ins";
+            let prefAttribute = "ner";
             if(this.actor.system.spellcastingType=='researcher')
-                prefAttribute = "rea"
+            {
+                prefAttribute = "foc"
+            }
             else if(this.actor.system.spellcastingType=='dabbler')
-                prefAttribute = "wil"
+            {
+                prefAttribute = "pre"
+            }
+                
 
             game.flagship2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.system, prefAttribute: prefAttribute })
 

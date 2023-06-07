@@ -119,9 +119,9 @@
     },
     "FLAGSHIP2D20.SPELL": {
         "SpellTypes": {
-            "ins": "Traditional",
-            "rea": "Researcher",
-            "wil": "Dabbler"
+            "ner": "Traditional",
+            "foc": "Researcher",
+            "pre": "Dabbler"
         }
     },
     "FLAGSHIP2D20.TEMPLATES": {

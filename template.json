@@ -175,7 +175,7 @@
 			"momentum":"",
 			"complication":20,
 			"bonusChallenge":0,
-			"spellType":"ins",
+			"spellType":"ner",
 			"mantle":false,
 			"ritualStress":{
 				"value":0,

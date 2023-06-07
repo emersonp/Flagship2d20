@@ -954,95 +954,95 @@ a:hover {
   border-bottom: none;
 }
 
-.flagship2d20 .ac-grid {
+.flagship2d20 .flagship-grid {
   display: flex;
   flex-direction: column;
   border: 1px solid #759549;
 }
 
-.flagship2d20 .ac-grid .item {
+.flagship2d20 .flagship-grid .item {
   border-bottom: 1px solid #759549;
 }
 
-.flagship2d20 .ac-grid .item:last-child {
+.flagship2d20 .flagship-grid .item:last-child {
   border-bottom: none;
 }
 
-.flagship2d20 .ac-grid .item .row {
+.flagship2d20 .flagship-grid .item .row {
   display: flex;
   flex-direction: row;
   flex: 0;
   align-items: stretch;
 }
 
-.flagship2d20 .ac-grid .item .row:last-child {
+.flagship2d20 .flagship-grid .item .row:last-child {
   border-bottom: none;
 }
 
-.flagship2d20 .ac-grid .item .row .cell {
+.flagship2d20 .flagship-grid .item .row .cell {
   display: flex;
   padding: 5px;
   border-right: 1px solid #759549;
 }
 
-.flagship2d20 .ac-grid .item .row .cell.align-center {
+.flagship2d20 .flagship-grid .item .row .cell.align-center {
   align-items: center;
 }
 
-.flagship2d20 .ac-grid .item .row .cell.align-left {
+.flagship2d20 .flagship-grid .item .row .cell.align-left {
   justify-content: start;
   text-align: left;
 }
 
-.flagship2d20 .ac-grid .item .row .cell.cell-name img {
+.flagship2d20 .flagship-grid .item .row .cell.cell-name img {
   max-width: 1.563rem;
   max-height: 1.563rem;
   margin-right: 0.313rem;
 }
 
-.flagship2d20 .ac-grid .item .row .cell.column {
+.flagship2d20 .flagship-grid .item .row .cell.column {
   flex-direction: column;
 }
 
-.flagship2d20 .ac-grid .item .row .cell:last-child {
+.flagship2d20 .flagship-grid .item .row .cell:last-child {
   border-right: none;
 }
 
-.flagship2d20 .ac-grid .item .row .cell.f1 {
+.flagship2d20 .flagship-grid .item .row .cell.f1 {
   flex: 1;
 }
 
-.flagship2d20 .ac-grid .item .row .cell.f2 {
+.flagship2d20 .flagship-grid .item .row .cell.f2 {
   flex: 2;
 }
 
-.flagship2d20 .ac-grid .item .row .cell.f3 {
+.flagship2d20 .flagship-grid .item .row .cell.f3 {
   flex: 3;
 }
 
-.flagship2d20 .ac-grid .item .row .cell.f4 {
+.flagship2d20 .flagship-grid .item .row .cell.f4 {
   flex: 4;
 }
 
-.flagship2d20 .ac-grid .item .row .cell.f5 {
+.flagship2d20 .flagship-grid .item .row .cell.f5 {
   flex: 5;
 }
 
-.flagship2d20 .ac-grid .item .row .cell.f05 {
+.flagship2d20 .flagship-grid .item .row .cell.f05 {
   flex: 0.5;
 }
 
-.flagship2d20 .ac-grid .item .row .cell.roll {
+.flagship2d20 .flagship-grid .item .row .cell.roll {
   cursor: pointer;
 }
 
-.flagship2d20 .ac-grid .item .row .cell.green {
+.flagship2d20 .flagship-grid .item .row .cell.green {
   color: #ebe7d7;
   background-color: #759549;
   font-weight: 900;
 }
 
-.flagship2d20 .ac-grid .item .item-summary {
+.flagship2d20 .flagship-grid .item .item-summary {
   padding: 5px;
   border-top: 1px solid #759549;
   border-bottom: 1px solid #759549;

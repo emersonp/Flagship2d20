@@ -599,6 +599,7 @@ export class FlagshipActorSheet extends ActorSheet {
 
 
     _editOwnedItemById(_itemId) {
+        console.log("PARKER: Right clicked!");
         const item = this.actor.items.get(_itemId);
         item.sheet.render(true);
     }

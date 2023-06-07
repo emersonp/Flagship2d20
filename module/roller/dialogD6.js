@@ -7,14 +7,14 @@ export class DialogD6 extends Dialog {
         this.options.classes = ["dice-icon"];
     }
 
-    static async createDialog({ rollName = "Challenge Roll", diceNum = 2, ac2d20Roll = null, itemId = null, actorId = null } = {}) {
+    static async createDialog({ rollName = "Challenge Roll", diceNum = 2, flagship2d20Roll = null, itemId = null, actorId = null } = {}) {
         let dialogData = {}
         dialogData.rollName = rollName;
         dialogData.diceNum = diceNum;
-        dialogData.ac2d20Roll = ac2d20Roll;
+        dialogData.flagship2d20Roll = flagship2d20Roll;
         dialogData.itemId = itemId;
         dialogData.actorId = actorId;
-        const html = `<div class="flexrow ac2d20-dialog">
+        const html = `<div class="flexrow flagship2d20-dialog">
         <div class="flexrow resource" style="padding:5px">
         <label class="title-label">Number of Dice:</label><input type="number" class="d-number" value="${diceNum}">
         </div>
@@ -28,10 +28,14 @@ export class DialogD6 extends Dialog {
                     label: "ROLL",
                     callback: (html) => {
                         let diceNum = html.find('.d-number')[0].value;
-                        if (!ac2d20Roll)
-                            game.ac2d20.Roller2D20.rollD6({ rollname: rollName, dicenum: parseInt(diceNum), itemId: itemId, actorId: actorId });
+                        if (!flagship2d20Roll)
+                        {
+                            game.flagship2d20.Roller2D20.rollD6({ rollname: rollName, dicenum: parseInt(diceNum), itemId: itemId, actorId: actorId });
+                        }
                         else
-                            game.ac2d20.Roller2D20.addD6({ rollname: rollName, dicenum: parseInt(diceNum), ac2d20Roll: ac2d20Roll, itemId: itemId, actorId: actorId });
+                        {
+                            game.flagship2d20.Roller2D20.addD6({ rollname: rollName, dicenum: parseInt(diceNum), flagship2d20Roll: flagship2d20Roll, itemId: itemId, actorId: actorId });
+                        }
                     }
                 }
             },

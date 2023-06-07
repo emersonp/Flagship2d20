@@ -1,18 +1,18 @@
-import { AC2D20 } from "../helpers/config.mjs";
+import { Flagship2d20 } from "../helpers/config.mjs";
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/effects.mjs";
-import { ACActorSheet } from "./actor-sheet.mjs";
+import { FlagshipActorSheet } from "./actor-sheet.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
- * @extends {ACActorSheet}
+ * @extends { FlagshipActorSheet }
  */
-export class ACVehicleSheet extends ACActorSheet {
+export class FlagshipVehicleSheet extends FlagshipActorSheet {
 
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["ac2d20", "sheet", "actor"],
-            template: "systems/ac2d20/templates/actor/vehicle-sheet.html",
+            classes: ["flagship2d20", "sheet", "actor"],
+            template: "systems/flagship2d20/templates/actor/vehicle-sheet.html",
             width: 550,
             height: 550,
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "abilities" }]

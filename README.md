@@ -1,6 +1,6 @@
-# Achtung Cthulhu 2D20
+# Flagship 2D20
 
-This is the unofficial Achtung Cthulhu 2d20 system for Foundry
+This is the Flagship 2d20 system for Foundry.
 
 ## Sheets
 

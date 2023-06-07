@@ -3,7 +3,7 @@
  * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
  * @extends {Actor}
  */
-export class ACActor extends Actor {
+export class FlagshipActor extends Actor {
 
     /** @override */
     prepareData() {
@@ -105,7 +105,7 @@ export class ACActor extends Actor {
         await super._preCreate(data, options, user);
         // set icon based on actor type    
         if(data.img == undefined){  
-            let ico = `systems/ac2d20/assets/doc-icons/${this.type}.svg`;
+            let ico = `systems/flagship2d20/assets/doc-icons/${this.type}.svg`;
             this.updateSource({ 'img': ico });
         }
         // Setup Tokens
@@ -120,9 +120,9 @@ export class ACActor extends Actor {
         }
         // Add Skills to Characters
         if (this.type === 'character') {
-            const packName = game.settings.get('ac2d20', 'compendium-skills');
+            const packName = game.settings.get('flagship2d20', 'compendium-skills');
             if(!packName)
-                packName = "ac2d20.skills"
+                packName = "flagship2d20.skills"
                 
             let packSkills = await game.packs.get(packName).getDocuments();
             const items = this.items.map(i => i.toObject());

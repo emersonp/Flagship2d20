@@ -94,22 +94,22 @@ export class Roller2D20 {
             actorId: actorId,
             itemId: itemId
         }
-        const html = await renderTemplate("systems/ac2d20/templates/chat/roll2d20.html", rollData);
-        let ac2d20Roll = {}
-        ac2d20Roll.rollname = rollname;
-        ac2d20Roll.dicesRolled = dicesRolled;
-        ac2d20Roll.successTreshold = successTreshold;
-        ac2d20Roll.critTreshold = critTreshold;
-        ac2d20Roll.complicationTreshold = complicationTreshold;
-        ac2d20Roll.rerollIndexes = rerollIndexes;
-        ac2d20Roll.diceFace = "d20";
+        const html = await renderTemplate("systems/flagship2d20/templates/chat/roll2d20.html", rollData);
+        let flagship2d20Roll = {}
+        flagship2d20Roll.rollname = rollname;
+        flagship2d20Roll.dicesRolled = dicesRolled;
+        flagship2d20Roll.successTreshold = successTreshold;
+        flagship2d20Roll.critTreshold = critTreshold;
+        flagship2d20Roll.complicationTreshold = complicationTreshold;
+        flagship2d20Roll.rerollIndexes = rerollIndexes;
+        flagship2d20Roll.diceFace = "d20";
         let speaker = {actor:actorId}
         let chatData = {
             user: game.user.id,
             speaker: speaker,
             rollMode: game.settings.get("core", "rollMode"),
             content: html,
-            flags: { ac2d20roll: ac2d20Roll },
+            flags: { flagship2d20roll: flagship2d20Roll },
             type: CONST.CHAT_MESSAGE_TYPES.ROLL,
             roll: roll,
         };
@@ -208,12 +208,12 @@ export class Roller2D20 {
         });
     }
 
-    static async addD6({ rollname = "Roll D6", dicenum = 2, ac2d20Roll = null, dicesRolled = [], itemId = null, actorId = null } = {}) {
+    static async addD6({ rollname = "Roll D6", dicenum = 2, flagship2d20Roll = null, dicesRolled = [], itemId = null, actorId = null } = {}) {
         let formula = `${dicenum}ds`;
         let _roll = new Roll(formula);
         await _roll.evaluate({ async: true });
-        let newRollName = `${ac2d20Roll.rollname} [+ ${dicenum} DC]`;
-        let oldDiceRolled = ac2d20Roll.dicesRolled;
+        let newRollName = `${flagship2d20Roll.rollname} [+ ${dicenum} DC]`;
+        let oldDiceRolled = flagship2d20Roll.dicesRolled;
         await Roller2D20.parseD6Roll({
             rollname: newRollName,
             roll: _roll,
@@ -247,8 +247,8 @@ export class Roller2D20 {
                     for (let de in item.system.effect) {
                         if (item.system.effect[de].value) {
                             let rank = item.system.effect[de].rank ?? "";
-                            let damageEffectLabel = game.i18n.localize(`AC2D20.WEAPONS.damageEffect.${de}`);
-                            let efectLabel = `<span data-tooltip="${Handlebars.helpers.getTooltipFromConfigKey('AC2D20.WEAPONS.effects.'+de)}">${damageEffectLabel}${rank}</span>`;
+                            let damageEffectLabel = game.i18n.localize(`FLAGSHIP2D20.WEAPONS.damageEffect.${de}`);
+                            let efectLabel = `<span data-tooltip="${Handlebars.helpers.getTooltipFromConfigKey('FLAGSHIP2D20.WEAPONS.effects.'+de)}">${damageEffectLabel}${rank}</span>`;
                             itemEffects.push(efectLabel);
                         }
                     }
@@ -256,7 +256,7 @@ export class Roller2D20 {
 
                     for (let qu in item.system.qualities) {
                         if (item.system.qualities[qu].value) {
-                            let quLabel = game.i18n.localize(`AC2D20.WEAPONS.qualities.${qu}`);
+                            let quLabel = game.i18n.localize(`FLAGSHIP2D20.WEAPONS.qualities.${qu}`);
                             itemQualities.push(quLabel)
                         }
                     }
@@ -265,34 +265,6 @@ export class Roller2D20 {
 
         }
 
-        // if (weapon != null) {
-        //     for (let de in weapon.data.effect) {
-        //         if (weapon.data.effect[de].value) {
-        //             let rank = weapon.data.effect[de].rank ?? "";
-        //             let damageEffectLabel = game.i18n.localize(`AC2D20.WEAPONS.damageEffect.${de}`);
-        //             let efectLabel = `${damageEffectLabel}${rank}`;
-        //             weaponDamageEffectsList.push(efectLabel);
-        //         }
-        //     }
-
-        //     for (let qu in weapon.data.qualities) {
-        //         if (weapon.data.qualities[qu].value) {
-        //             //let rank = weapon.system.effect[qu].rank ?? "";
-        //             let quLabel = game.i18n.localize(`AC2D20.WEAPONS.qualities.${qu}`);
-        //             //let quLabel = `${damageEffectLabel}${rank}`;
-        //             weaponQualityList.push(quLabel);
-        //         }
-        //     }
-        // }
-        //let weaponDamageEffects = weaponDamageEffectsList.join(', ');
-        // let rollData = {
-        //     rollname: rollname,
-        //     damage: damage,
-        //     effects: effects,
-        //     results: dicesRolled,
-        //     weaponDamageEffects: weaponDamageEffects,
-        //     weaponQualityList: weaponQualityList
-        // }
         let rollData = {
             rollname: rollname,
             damage: damage,
@@ -301,20 +273,20 @@ export class Roller2D20 {
             itemEffects: itemEffects,
             itemQualities: itemQualities
         }
-        const html = await renderTemplate("systems/ac2d20/templates/chat/rollD6.html", rollData);
-        let ac2d20Roll = {}
-        ac2d20Roll.rollname = rollname;
-        ac2d20Roll.dicesRolled = dicesRolled;
-        ac2d20Roll.damage = damage;
-        ac2d20Roll.effects = effects;
-        ac2d20Roll.rerollIndexes = rerollIndexes;
-        ac2d20Roll.diceFace = "d6";
+        const html = await renderTemplate("systems/flagship2d20/templates/chat/rollD6.html", rollData);
+        let flagship2d20Roll = {}
+        flagship2d20Roll.rollname = rollname;
+        flagship2d20Roll.dicesRolled = dicesRolled;
+        flagship2d20Roll.damage = damage;
+        flagship2d20Roll.effects = effects;
+        flagship2d20Roll.rerollIndexes = rerollIndexes;
+        flagship2d20Roll.diceFace = "d6";
 
         let chatData = {
             user: game.user.id,
             rollMode: game.settings.get("core", "rollMode"),
             content: html,
-            flags: { ac2d20roll: ac2d20Roll, itemId: itemId, actorId: actorId },
+            flags: { flagship2d20roll: flagship2d20Roll, itemId: itemId, actorId: actorId },
             type: CONST.CHAT_MESSAGE_TYPES.ROLL,
             roll: roll,
         };

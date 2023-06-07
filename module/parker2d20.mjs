@@ -1,17 +1,17 @@
 // Import document classes.
-import { ACActor } from "./documents/actor.mjs";
-import { ACItem } from "./documents/item.mjs";
+import { FlagshipActor } from "./documents/actor.mjs";
+import { FlagshipItem } from "./documents/item.mjs";
 // Import sheet classes.
 import { ACActorSheet } from "./sheets/actor-sheet.mjs";
 import { ACNPCSheet } from "./sheets/npc-sheet.mjs";
 import { ACVehicleSheet } from "./sheets/vehicle-sheet.mjs";
 import { ACItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
-import { AC2D20 } from "./helpers/config.mjs";
+import { Flagship2d20 } from "./helpers/config.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { registerHandlebarsHelpers } from "./helpers/handlebars.mjs"
 //Import Roll2D20
-import { Roller2D20 } from "./roller/ac2d20-roller.mjs"
+import { Roller2D20 } from "./roller/flagship2d20-roller.mjs"
 import { Dialog2d20 } from './roller/dialog2d20.js'
 import { DialogD6 } from './roller/dialogD6.js'
 import DieACChallenge from './roller/challengeDie.js'
@@ -32,16 +32,16 @@ Hooks.once('init', async function () {
     // Add utility classes to the global game object so that they're more easily
     // accessible in global contexts.
 
-    game.ac2d20 = {
-        ACActor,
-        ACItem,
+    game.flagship2d20 = {
+        FlagshipActor: ACActor,
+        FlagshipItem: ACItem,
         Roller2D20,
         Dialog2d20,
         DialogD6
     };
 
     // Add custom constants for configuration.
-    CONFIG.AC2D20 = AC2D20;
+    CONFIG.FLAGSHIP2D20 = Flagship2d20;
 
     /**
    * Set an initiative formula for the system
@@ -53,17 +53,17 @@ Hooks.once('init', async function () {
     };
 
     // Define custom Document classes
-    CONFIG.Actor.documentClass = ACActor;
-    CONFIG.Item.documentClass = ACItem;
+    CONFIG.Actor.documentClass = FlagshipActor;
+    CONFIG.Item.documentClass = FlagshipItem;
     CONFIG.Dice.terms["s"] = DieACChallenge;
 
     // Register sheet application classes
     Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("ac2d20", ACActorSheet, { types: ["character"], makeDefault: true });
-    Actors.registerSheet("ac2d20", ACNPCSheet, { types: ["npc"], makeDefault: true });
-    Actors.registerSheet("ac2d20", ACVehicleSheet, { types: ["vehicle"], makeDefault: true });
+    Actors.registerSheet("flagship2d20", FlagshipActorSheet, { types: ["character"], makeDefault: true });
+    Actors.registerSheet("flagship2d20", FlagshipNPCSheet, { types: ["npc"], makeDefault: true });
+    Actors.registerSheet("flagship2d20", FlagshipVehicleSheet, { types: ["vehicle"], makeDefault: true });
     Items.unregisterSheet("core", ItemSheet);
-    Items.registerSheet("ac2d20", ACItemSheet, { makeDefault: true });
+    Items.registerSheet("flagship2d20", FlagshipItemSheet, { makeDefault: true });
 
     // Register custom system settings
     registerSettings();
@@ -75,11 +75,11 @@ Hooks.once('init', async function () {
 });
 
 Hooks.on('ready', async () => {
-    const listLocation = await game.settings.get('ac2d20', 'hoversJsonLocation')
+    const listLocation = await game.settings.get('flagship2d20', 'hoversJsonLocation')
     const jsonFile = await fetch(listLocation)
     const content = await jsonFile.json();
-    CONFIG.AC2D20.WEAPONS.effects = content.effects;
-    CONFIG.AC2D20.WEAPONS.qualities = content.qualities;
+    CONFIG.FLAGSHIP2D20.WEAPONS.effects = content.effects;
+    CONFIG.FLAGSHIP2D20.WEAPONS.qualities = content.qualities;
 
     for await (const key of Object.keys(content.effects)){       
         let qEnriched = await TextEditor.enrichHTML(content.effects[key], {async: true});
@@ -90,7 +90,6 @@ Hooks.on('ready', async () => {
         let qEnriched = await TextEditor.enrichHTML(content.qualities[key], {async: true});
         content.qualities[key] = qEnriched.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;');
     }
-
 })
 
 
@@ -109,21 +108,21 @@ Hooks.on('renderChatMessage', (message, html, data) => {
                 ui.notifications.notify('Select Dice you want to Reroll');
             }
             else {
-                let ac2d20Roll = message.flags.ac2d20roll;
-                if (ac2d20Roll.diceFace == "d20") {
+                let flagship2d20Roll = message.flags.flagship2d20roll;
+                if (flagship2d20Roll.diceFace == "d20") {
                     Roller2D20.rerollD20({
-                        rollname: ac2d20Roll.rollname,
+                        rollname: flagship2d20Roll.rollname,
                         rerollIndexes: rerollIndex,
-                        successTreshold: ac2d20Roll.successTreshold,
-                        critTreshold: ac2d20Roll.critTreshold,
-                        complicationTreshold: ac2d20Roll.complicationTreshold,
-                        dicesRolled: ac2d20Roll.dicesRolled
+                        successTreshold: flagship2d20Roll.successTreshold,
+                        critTreshold: flagship2d20Roll.critTreshold,
+                        complicationTreshold: flagship2d20Roll.complicationTreshold,
+                        dicesRolled: flagship2d20Roll.dicesRolled
                     });
-                } else if (ac2d20Roll.diceFace == "d6") {
+                } else if (flagship2d20Roll.diceFace == "d6") {
                     Roller2D20.rerollD6({
-                        rollname: ac2d20Roll.rollname,
+                        rollname: flagship2d20Roll.rollname,
                         rerollIndexes: rerollIndex,
-                        dicesRolled: ac2d20Roll.dicesRolled,
+                        dicesRolled: flagship2d20Roll.dicesRolled,
                         itemId: message.flags.itemId,
                         actorId: message.flags.actorId,
                     });
@@ -147,10 +146,10 @@ Hooks.on('renderChatMessage', (message, html, data) => {
     if (addBtn.length > 0) {
         addBtn[0].setAttribute('data-messageId', message.id);
         addBtn.click((ev) => {
-            let ac2d20Roll = message.flags.ac2d20roll;
+            let flagship2d20Roll = message.flags.flagship2d20roll;
             let itemId = message.flags.itemId;
             let actorId = message.flags.actorId;
-            game.ac2d20.DialogD6.createDialog({ rollname: ac2d20Roll.rollname, diceNum: 1, ac2d20Roll: ac2d20Roll, itemId: itemId, actorId: actorId })
+            game.flagship2d20.DialogD6.createDialog({ rollname: flagship2d20Roll.rollname, diceNum: 1, flagship2d20Roll: flagship2d20Roll, itemId: itemId, actorId: actorId })
         });
     }
 
@@ -164,14 +163,14 @@ Hooks.on('renderChatMessage', (message, html, data) => {
 
 Hooks.once("diceSoNiceReady", (dice3d) => {
     dice3d.addSystem(
-        { id: "ac2d20", name: "Achtung Cthulhu 2d20" },
+        { id: "flagship", name: "Flagship 2d20" },
         true
     );
 
     dice3d.addColorset(
         {
-            name: "ac2d20",
-            description: "Achtung Cthulhu 2d20",
+            name: "flagship2d20",
+            description: "Flagship 2d20",
             category: "Colors",
             foreground: "#000000",
             background: "#000000",
@@ -183,14 +182,14 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     dice3d.addDicePreset({
         type: "ds",
         labels: [
-            "systems/ac2d20/assets/dice/d1.webp",
-            "systems/ac2d20/assets/dice/d2.webp",
-            "systems/ac2d20/assets/dice/d3.webp",
-            "systems/ac2d20/assets/dice/d4.webp",
-            "systems/ac2d20/assets/dice/d5.webp",
-            "systems/ac2d20/assets/dice/d6.webp",
+            "systems/flagship2d20/assets/dice/d1.webp",
+            "systems/flagship2d20/assets/dice/d2.webp",
+            "systems/flagship2d20/assets/dice/d3.webp",
+            "systems/flagship2d20/assets/dice/d4.webp",
+            "systems/flagship2d20/assets/dice/d5.webp",
+            "systems/flagship2d20/assets/dice/d6.webp",
         ],
-        system: "ac2d20",
-        colorset: "ac2d20"
+        system: "flagship2d20",
+        colorset: "flagship2d20"
     });
 });

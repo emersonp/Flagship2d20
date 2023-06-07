@@ -1,24 +1,24 @@
-export const AC2D20 = {};
+export const Flagship2d20 = {};
 
-AC2D20.attributes = {
-  "agi": "AC2D20.AbilityAgi",
-  "bra": "AC2D20.AbilityBra",
-  "coo": "AC2D20.AbilityCoo",
-  "ins": "AC2D20.AbilityIns",
-  "rea": "AC2D20.AbilityRea",
-  "wil": "AC2D20.AbilityWil",
+Flagship2d20.attributes = {
+  "agi": "Flagship2d20.AbilityAgi",
+  "bra": "Flagship2d20.AbilityBra",
+  "coo": "Flagship2d20.AbilityCoo",
+  "ins": "Flagship2d20.AbilityIns",
+  "rea": "Flagship2d20.AbilityRea",
+  "wil": "Flagship2d20.AbilityWil",
 };
 
-AC2D20.abilityAbbreviations = {
-  "agi": "AC2D20.AbilityAgiAbr",
-  "bra": "AC2D20.AbilityBraAbr",
-  "coo": "AC2D20.AbilityCooAbr",
-  "ins": "AC2D20.AbilityInsAbr",
-  "rea": "AC2D20.AbilityReaAbr",
-  "wil": "AC2D20.AbilityWilAbr",
+Flagship2d20.abilityAbbreviations = {
+  "agi": "Flagship2d20.AbilityAgiAbr",
+  "bra": "Flagship2d20.AbilityBraAbr",
+  "coo": "Flagship2d20.AbilityCooAbr",
+  "ins": "Flagship2d20.AbilityInsAbr",
+  "rea": "Flagship2d20.AbilityReaAbr",
+  "wil": "Flagship2d20.AbilityWilAbr",
 };
 
-AC2D20.SKILLS = [
+Flagship2d20.SKILLS = [
   {
     'label': 'ACADEMIA',
     'key': "Academia",
@@ -82,15 +82,15 @@ AC2D20.SKILLS = [
   }
 ];
 
-AC2D20.Size = ["Trivial", "Minor", "Major"];
+Flagship2d20.Size = ["Trivial", "Minor", "Major"];
 
-AC2D20.WEAPONS = {
+Flagship2d20.WEAPONS = {
   "range": {
-    "reach": "AC2D20.RANGE.reach",
-    "close": "AC2D20.RANGE.close",
-    "medium": "AC2D20.RANGE.medium",
-    "long": "AC2D20.RANGE.long",
-    "extreme": "AC2D20.RANGE.extreme"
+    "reach": "Flagship2d20.RANGE.reach",
+    "close": "Flagship2d20.RANGE.close",
+    "medium": "Flagship2d20.RANGE.medium",
+    "long": "Flagship2d20.RANGE.long",
+    "extreme": "Flagship2d20.RANGE.extreme"
   },
   "weaponTypes": [
     {
@@ -108,7 +108,7 @@ AC2D20.WEAPONS = {
   ]
 }
 
-AC2D20.spellcastingTypes = {
+Flagship2d20.spellcastingTypes = {
   "traditional":"traditional",
   "researcher":"researcher",
   "dabbler":"dabbler"

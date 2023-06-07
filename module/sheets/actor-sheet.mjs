@@ -1,17 +1,17 @@
-import { AC2D20 } from "../helpers/config.mjs";
+import { Flagship2d20 } from "../helpers/config.mjs";
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/effects.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class ACActorSheet extends ActorSheet {
+export class FlagshipActorSheet extends ActorSheet {
 
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["ac2d20", "sheet", "actor"],
-            template: "systems/ac2d20/templates/actor/actor-sheet.html",
+            classes: ["flagship2d20", "sheet", "actor"],
+            template: "systems/flagship2d20/templates/actor/actor-sheet.html",
             width: 720,
             height: 780,
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "abilities" }]
@@ -20,17 +20,13 @@ export class ACActorSheet extends ActorSheet {
 
     /** @override */
     get template() {
-        return `systems/ac2d20/templates/actor/actor-${this.actor.type}-sheet.html`;
+        return `systems/flagship2d20/templates/actor/actor-${this.actor.type}-sheet.html`;
     }
 
     /* -------------------------------------------- */
 
     /** @override */
     async getData() {
-
-        //const context = super.getData();
-
-        //const actorData = context.actor.data;
 
         const source = this.actor.toObject();
         const actorData = this.actor.toObject(false);
@@ -107,7 +103,7 @@ export class ACActorSheet extends ActorSheet {
 
         // Prepare active effects
         context.effects = prepareActiveEffectCategories(this.actor.effects);
-        context.AC2D20 = CONFIG.AC2D20;
+        context.FLAGSHIP2D20 = CONFIG.FLAGSHIP2D20;
 
         return context;
     }
@@ -264,8 +260,8 @@ export class ACActorSheet extends ActorSheet {
             if (this.actor.type == 'npc' || this.actor.type == 'vehicle')
                 complication -= this.actor.system.injuries.value;
 
-            const attrName = game.i18n.localize('AC2D20.Ability.' + attr);
-            game.ac2d20.Dialog2d20.createDialog({ rollName: `Roll ${attrName}`, diceNum: 2, attribute: attribute.value, skill: 0, focus: false, complication: complication })
+            const attrName = game.i18n.localize('FLAGSHIP2D20.Ability.' + attr);
+            game.flagship2d20.Dialog2d20.createDialog({ rollName: `Roll ${attrName}`, diceNum: 2, attribute: attribute.value, skill: 0, focus: false, complication: complication })
         })
 
         // * SKILLS LISTENERS [clic, right-click, value change, focus ]
@@ -346,7 +342,7 @@ export class ACActorSheet extends ActorSheet {
             else if(this.actor.system.spellcastingType=='dabbler')
                 prefAttribute = "wil"
 
-            game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.system, prefAttribute: prefAttribute })
+            game.flagship2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.system, prefAttribute: prefAttribute })
 
         });
 
@@ -356,7 +352,7 @@ export class ACActorSheet extends ActorSheet {
             const itemId = li.data("itemId");
             const item = this.actor.items.get(li.data("itemId"));
             const cost = parseInt(item.system.cost);
-            game.ac2d20.DialogD6.createDialog({ rollName: `${item.name} - Cost`, diceNum: cost, ac2d20Roll: null, itemId: itemId, actorId: this.actor._id })
+            game.flagship2d20.DialogD6.createDialog({ rollName: `${item.name} - Cost`, diceNum: cost, flagship2d20Roll: null, itemId: itemId, actorId: this.actor._id })
         })
 
         html.find('.item-value-changer').change(async (event) => {
@@ -410,7 +406,7 @@ export class ACActorSheet extends ActorSheet {
             const attrValue = item.actor.type == 'vehicle' ? 6 : -1;
             // weaponType is actualy attribute abrevation
             const prefAttribute = item.system.weaponType;
-            game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.system, prefAttribute: prefAttribute, actorId:this.actor._id, itemId: item._id })
+            game.flagship2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.system, prefAttribute: prefAttribute, actorId:this.actor._id, itemId: item._id })
 
         });
 
@@ -427,7 +423,7 @@ export class ACActorSheet extends ActorSheet {
             else if (item.system.weaponType == 'wil')
                 stressBonus = item.actor.system.attributes['wil'].bonus;
             let stress = parseInt(item.system.stress) + parseInt(stressBonus);
-            game.ac2d20.DialogD6.createDialog({ rollName: item.name, diceNum: stress, ac2d20Roll: null, itemId: itemId, actorId: this.actor._id })
+            game.flagship2d20.DialogD6.createDialog({ rollName: item.name, diceNum: stress, flagship2d20Roll: null, itemId: itemId, actorId: this.actor._id })
         })
 
         // * AMMO COUNT UPDATE
@@ -460,7 +456,7 @@ export class ACActorSheet extends ActorSheet {
         html.find('.roll-impact.clickable').click((event) => {
             event.preventDefault();
             const impact = this.actor.system.impact;
-            game.ac2d20.DialogD6.createDialog({ rollName: `${this.actor.name} Impact`, diceNum: impact, ac2d20Roll: null })
+            game.flagship2d20.DialogD6.createDialog({ rollName: `${this.actor.name} Impact`, diceNum: impact, flagship2d20Roll: null })
         })
 
         // * CLICK TO EXPAND
@@ -533,9 +529,9 @@ export class ACActorSheet extends ActorSheet {
         /* -------------------------------------------- */
         /* ADD RIGH CLICK CONTENT MENU
         /* -------------------------------------------- */
-        const editLabel = game.i18n.localize("AC2D20.EDIT");
-        const deleteLabel = game.i18n.localize("AC2D20.DELETE");
-        const postLabel = game.i18n.localize("AC2D20.POST");
+        const editLabel = game.i18n.localize("FLAGSHIP2D20.EDIT");
+        const deleteLabel = game.i18n.localize("FLAGSHIP2D20.DELETE");
+        const postLabel = game.i18n.localize("FLAGSHIP2D20.POST");
 
         let menu_items = [
             {
@@ -643,7 +639,7 @@ export class ACActorSheet extends ActorSheet {
     }
     _onRollSkill(skillName, rank, attribute, focus) {
         let complication = 20 - this.actor.getComplicationFromInjuries();
-        game.ac2d20.Dialog2d20.createDialog({ rollName: skillName, diceNum: 2, attribute: -1, skill: rank, focus: focus, complication: complication, actor: this.actor.system })
+        game.flagship2d20.Dialog2d20.createDialog({ rollName: skillName, diceNum: 2, attribute: -1, skill: rank, focus: focus, complication: complication, actor: this.actor.system })
     }
 
     async _onItemSummary(event) {

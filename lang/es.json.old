@@ -1,41 +1,41 @@
 {
-    "AC2D20.AbilityAbbr.agi": "agi",
-    "AC2D20.AbilityAbbr.bra": "mus",
-    "AC2D20.AbilityAbbr.coo": "coo",
-    "AC2D20.AbilityAbbr.ins": "pers",
-    "AC2D20.AbilityAbbr.rea": "raz",
-    "AC2D20.AbilityAbbr.wil": "vol",
-    "AC2D20.Ability.agi": "Agilidad",
-    "AC2D20.Ability.bra": "Músculo",
-    "AC2D20.Ability.coo": "Coordinación",
-    "AC2D20.Ability.ins": "Perspicacia",
-    "AC2D20.Ability.rea": "Razón",
-    "AC2D20.Ability.wil": "Voluntad",
-    "AC2D20.EffectCreate": "Crear Efecto",
-    "AC2D20.EffectDelete": "Borrar Efecto",
-    "AC2D20.EffectEdit": "Editar Efecto",
-    "AC2D20.EffectToggle": "Alternar Efecto",
-    "AC2D20.equipped": "Equipado",
-    "AC2D20.STRESS": {
+    "FLAGSHIP2D20.AbilityAbbr.agi": "agi",
+    "FLAGSHIP2D20.AbilityAbbr.bra": "mus",
+    "FLAGSHIP2D20.AbilityAbbr.coo": "coo",
+    "FLAGSHIP2D20.AbilityAbbr.ins": "pers",
+    "FLAGSHIP2D20.AbilityAbbr.rea": "raz",
+    "FLAGSHIP2D20.AbilityAbbr.wil": "vol",
+    "FLAGSHIP2D20.Ability.agi": "Agilidad",
+    "FLAGSHIP2D20.Ability.bra": "Músculo",
+    "FLAGSHIP2D20.Ability.coo": "Coordinación",
+    "FLAGSHIP2D20.Ability.ins": "Perspicacia",
+    "FLAGSHIP2D20.Ability.rea": "Razón",
+    "FLAGSHIP2D20.Ability.wil": "Voluntad",
+    "FLAGSHIP2D20.EffectCreate": "Crear Efecto",
+    "FLAGSHIP2D20.EffectDelete": "Borrar Efecto",
+    "FLAGSHIP2D20.EffectEdit": "Editar Efecto",
+    "FLAGSHIP2D20.EffectToggle": "Alternar Efecto",
+    "FLAGSHIP2D20.equipped": "Equipado",
+    "FLAGSHIP2D20.STRESS": {
         "current": "Estrés actual",
         "stress": "Estrés",
         "max": "Estrés Máximo"
     },
-    "AC2D20.OTHER": "Otro",
-    "AC2D20.RANGE": {
+    "FLAGSHIP2D20.OTHER": "Otro",
+    "FLAGSHIP2D20.RANGE": {
         "reach": "Alcance",
         "close": "Corto",
         "medium": "Medio",
         "long": "Largo",
         "extreme": "Extremo"
     },
-    "AC2D20.RESISTANCE": {
+    "FLAGSHIP2D20.RESISTANCE": {
         "armor": "Armadura",
         "courage": "Coraje",
         "fatigue": "Fatiga",
         "resistance": "Resistencia"
     },
-    "AC2D20.SKILL": {
+    "FLAGSHIP2D20.SKILL": {
         "ACADEMIA": "Académicas",
         "ATHLETICS": "Atletismo",
         "ENGINEERING": "Ingeniería",
@@ -49,7 +49,7 @@
         "TACTICS": "Tácticas",
         "VEHICLES": "Vehículos"
     },
-    "AC2D20.FOCUS": {
+    "FLAGSHIP2D20.FOCUS": {
         "Art": "Arte",
         "Cryptography": "Criptografía",
         "Finance": "Finanzas",
@@ -119,14 +119,14 @@
         "Aircraft": "Vehículos Aéreos",
         "Watercraft": "Vehículos Acuáticos"
     },
-    "AC2D20.SPELL": {
+    "FLAGSHIP2D20.SPELL": {
         "SpellTypes": {
             "ins": "Tradicional",
             "rea": "Investigador",
             "wil": "Aficionado"
         }
     },
-    "AC2D20.TEMPLATES": {
+    "FLAGSHIP2D20.TEMPLATES": {
         "Salvo": "Salva",
         "Resistance": "Resistencia",
         "Qualities": "Cualidades",
@@ -251,7 +251,7 @@
         "skill_focus": "Habilidad/Especialidad",
         "AddFocus": "Añadir Especialidad"
     },
-    "AC2D20.UI": {
+    "FLAGSHIP2D20.UI": {
         "Add": "Añadir",
         "CarryWeight": "Peso Acarreado",
         "Cost": "Coste",
@@ -269,7 +269,7 @@
         "UNSORTED": "Desordenado",
         "Weight": "Peso"
     },
-    "AC2D20.WEAPONS": {
+    "FLAGSHIP2D20.WEAPONS": {
         "qualities": "Cualidades",
         "type": "Tipo de Arma",
         "damageEffect": {
@@ -317,14 +317,14 @@
             "wil": "Mental"
         }
     },
-    "AC2D20.ARMOR": {
+    "FLAGSHIP2D20.ARMOR": {
         "qualities": {
             "heavy": "Pesada",
             "uncomfortable": "Incómoda",
             "shield": "Escudo"
         }
     },
-    "AC2D20.VEHICLES.QUALITIES": {
+    "FLAGSHIP2D20.VEHICLES.QUALITIES": {
         "cargo": "Carga",
         "cumbersome": "Incómodo",
         "enclosed": "Cerrado",

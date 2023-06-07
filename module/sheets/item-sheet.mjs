@@ -4,12 +4,12 @@ import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
  */
-export class ACItemSheet extends ItemSheet {
+export class FlagshipItemSheet extends ItemSheet {
 
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["ac2d20", "sheet", "item"],
+            classes: ["flagship2d20", "sheet", "item"],
             width: 520,
             height: 560,
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "attributes" }]
@@ -18,7 +18,7 @@ export class ACItemSheet extends ItemSheet {
 
     /** @override */
     get template() {
-        const path = "systems/ac2d20/templates/item";
+        const path = "systems/flagship2d20/templates/item";
         return `${path}/item-${this.item.type}-sheet.html`;
     }
 
@@ -40,7 +40,7 @@ export class ACItemSheet extends ItemSheet {
             isEmbedded: item.isEmbedded,
             type: item.type,      
             flags: item.flags,      
-            AC2D20: CONFIG.AC2D20,
+            FLAGSHIP2D20: CONFIG.FLAGSHIP2D20,
             effects: prepareActiveEffectCategories(item.effects),
             descriptionHTML: await TextEditor.enrichHTML(item.system.description, {
               secrets: item.isOwner,
@@ -60,12 +60,12 @@ export class ACItemSheet extends ItemSheet {
         //context.flags = itemData.flags;
 
         //context.effects = prepareActiveEffectCategories(this.item.effects);
-        //context.AC2D20 = CONFIG.AC2D20;
+        //context.FLAGSHIP2D20 = CONFIG.FLAGSHIP2D20;
 
 
         // Prepare Aditional Data
         // if (itemData.type == 'apaprel') {
-        //context.apparelTypes = CONFIG.AC2D20.APPAREL_TYPE;
+        //context.apparelTypes = CONFIG.FLAGSHIP2D20.APPAREL_TYPE;
         //}
 
         return context;

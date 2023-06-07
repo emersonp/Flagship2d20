@@ -36,7 +36,7 @@ export class Dialog2d20 extends Dialog {
             let skill = html.find('[name="skill"]').val();
             let complication = html.find('[name="complication"]').val();
             let isFocus = html.find('[name="focus"]').is(':checked');
-            game.ac2d20.Roller2D20.rollD20({ rollname: this.rollName, dicenum: this.diceNum, attribute: attr, skill: skill, focus: isFocus, complication: complication, actorId: this.actorId, itemId: this.itemId })
+            game.flagship2d20.Roller2D20.rollD20({ rollname: this.rollName, dicenum: this.diceNum, attribute: attr, skill: skill, focus: isFocus, complication: complication, actorId: this.actorId, itemId: this.itemId })
         });
     }
 
@@ -58,7 +58,7 @@ export class Dialog2d20 extends Dialog {
         dialogData.prefAttribute = prefAttribute;
         dialogData.actorId = actorId;
         dialogData.itemId = itemId;
-        const html = await renderTemplate("systems/ac2d20/templates/dialogs/dialog2d20.html", dialogData);
+        const html = await renderTemplate("systems/flagship2d20/templates/dialogs/dialog2d20.html", dialogData);
         let d = new Dialog2d20(rollName, diceNum, attribute, skill, focus, complication, actor, prefAttribute, actorId, itemId, {
             title: rollName,
             content: html,

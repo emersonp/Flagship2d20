@@ -1,41 +1,41 @@
 {
-    "AC2D20.AbilityAbbr.agi": "agi",
-    "AC2D20.AbilityAbbr.bra": "bra",
-    "AC2D20.AbilityAbbr.coo": "coo",
-    "AC2D20.AbilityAbbr.ins": "ins",
-    "AC2D20.AbilityAbbr.rea": "rea",
-    "AC2D20.AbilityAbbr.wil": "wil",
-    "AC2D20.Ability.agi": "Agility",
-    "AC2D20.Ability.bra": "Brawn",
-    "AC2D20.Ability.coo": "Coordination",
-    "AC2D20.Ability.ins": "Insight",
-    "AC2D20.Ability.rea": "Reason",
-    "AC2D20.Ability.wil": "Will",
-    "AC2D20.EffectCreate": "Create Effect",
-    "AC2D20.EffectDelete": "Delete Effect",
-    "AC2D20.EffectEdit": "Edit Effect",
-    "AC2D20.EffectToggle": "Toggle Effect",
-    "AC2D20.equipped": "Equipped",
-    "AC2D20.STRESS": {
+    "FLAGSHIP2D20.AbilityAbbr.agi": "agi",
+    "FLAGSHIP2D20.AbilityAbbr.bra": "bra",
+    "FLAGSHIP2D20.AbilityAbbr.coo": "coo",
+    "FLAGSHIP2D20.AbilityAbbr.ins": "ins",
+    "FLAGSHIP2D20.AbilityAbbr.rea": "rea",
+    "FLAGSHIP2D20.AbilityAbbr.wil": "wil",
+    "FLAGSHIP2D20.Ability.agi": "Agility",
+    "FLAGSHIP2D20.Ability.bra": "Brawn",
+    "FLAGSHIP2D20.Ability.coo": "Coordination",
+    "FLAGSHIP2D20.Ability.ins": "Insight",
+    "FLAGSHIP2D20.Ability.rea": "Reason",
+    "FLAGSHIP2D20.Ability.wil": "Will",
+    "FLAGSHIP2D20.EffectCreate": "Create Effect",
+    "FLAGSHIP2D20.EffectDelete": "Delete Effect",
+    "FLAGSHIP2D20.EffectEdit": "Edit Effect",
+    "FLAGSHIP2D20.EffectToggle": "Toggle Effect",
+    "FLAGSHIP2D20.equipped": "Equipped",
+    "FLAGSHIP2D20.STRESS": {
         "current": "Current Stress",
         "stress": "Stress",
         "max": "Max Stress"
     },
-    "AC2D20.OTHER": "Other",
-    "AC2D20.RANGE": {
+    "FLAGSHIP2D20.OTHER": "Other",
+    "FLAGSHIP2D20.RANGE": {
         "reach": "Reach",
         "close": "Close",
         "medium": "Medium",
         "long": "Long",
         "extreme": "Extreme"
     },
-    "AC2D20.RESISTANCE": {
+    "FLAGSHIP2D20.RESISTANCE": {
         "armor": "Armor",
         "courage": "Courage",
         "fatigue": "Fatigue",
         "resistance": "Resistance"
     },
-    "AC2D20.SKILL": {
+    "FLAGSHIP2D20.SKILL": {
         "ACADEMIA": "Academia",
         "ATHLETICS": "Athletics",
         "ENGINEERING": "Engineering",
@@ -49,7 +49,7 @@
         "TACTICS": "Tactics",
         "VEHICLES": "Vehicles"
     },
-    "AC2D20.FOCUS": {
+    "FLAGSHIP2D20.FOCUS": {
         "Art": "Art",
         "Cryptography": "Cryptography",
         "Finance": "Finance",
@@ -119,14 +119,14 @@
         "Aircraft": "Aircraft",
         "Watercraft": "Watercraft"
     },
-    "AC2D20.SPELL": {
+    "FLAGSHIP2D20.SPELL": {
         "SpellTypes": {
             "ins": "Traditional",
             "rea": "Researcher",
             "wil": "Dabbler"
         }
     },
-    "AC2D20.TEMPLATES": {
+    "FLAGSHIP2D20.TEMPLATES": {
         "Salvo": "Salvo",
         "Resistance": "Resistance",
         "Qualities": "Qualities",
@@ -251,7 +251,7 @@
         "skill_focus": "Skill/Focus",
         "AddFocus": "Add Focus"
     },
-    "AC2D20.UI": {
+    "FLAGSHIP2D20.UI": {
         "Add": "Add",
         "CarryWeight": "Carry Weight",
         "Cost": "Cost",
@@ -269,7 +269,7 @@
         "UNSORTED": "Unsorted",
         "Weight": "Weight"
     },
-    "AC2D20.WEAPONS": {
+    "FLAGSHIP2D20.WEAPONS": {
         "qualities": "Qualities",
         "type": "Weapon Type",
         "damageEffect": {
@@ -317,14 +317,14 @@
             "wil": "Mental"
         }
     },
-    "AC2D20.ARMOR": {
+    "FLAGSHIP2D20.ARMOR": {
         "qualities": {
             "heavy": "Heavy",
             "uncomfortable": "Uncomfortable",
             "shield": "Shield"
         }
     },
-    "AC2D20.VEHICLES.QUALITIES": {
+    "FLAGSHIP2D20.VEHICLES.QUALITIES": {
         "cargo": "Cargo",
         "cumbersome": "Cumbersome",
         "enclosed": "Enclosed",
@@ -354,7 +354,7 @@
     "ITEM.TypeEquipment": "Equipment",
     "ITEM.TypeSpecial_rule": "Special Rule",
     "ITEM.TypeWeapon": "Weapon",
-    "AC2D20.Spellcasting":{
+    "FLAGSHIP2D20.Spellcasting":{
         "SpellcastingType":"Spellcasting Type",
         "traditional":"traditional",
         "researcher":"researcher",

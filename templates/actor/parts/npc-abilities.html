@@ -2,14 +2,14 @@
     <div>
         {{#each system.attributes as |attribute key|}}
         <div class="label-number-box blue">
-            <label class="roll-attribute clickable" data-attr='{{key}}'>{{localize (concat 'AC2D20.Ability.' key)}}</label>
+            <label class="roll-attribute clickable" data-attr='{{key}}'>{{localize (concat 'FLAGSHIP2D20.Ability.' key)}}</label>
             <input type="number" class="borderless num-short-2" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number" min="0" />
         </div>
         {{/each}}
     </div>
     <div>
         <div class="label-number-box blue">
-            <label>{{localize 'AC2D20.STRESS.stress'}}</label>
+            <label>{{localize 'FLAGSHIP2D20.STRESS.stress'}}</label>
             <span>
                 <input type="number" class="borderless num-short-2" name="system.stress.value" value="{{system.stress.value}}" data-dtype="Number" min="0" />
                 <label>/</label>
@@ -17,7 +17,7 @@
             </span>
         </div>
         <div class="label-number-box blue">
-            <label>{{localize 'AC2D20.TEMPLATES.INJURIES'}}</label>
+            <label>{{localize 'FLAGSHIP2D20.TEMPLATES.INJURIES'}}</label>
             <span>
                 <input type="number" class="borderless num-short-2" name="system.injuries.value" value="{{system.injuries.value}}" data-dtype="Number" min="0" />
                 <label>/</label>
@@ -25,15 +25,15 @@
             </span>
         </div>
         <div class="label-number-box blue">
-            <label>{{localize 'AC2D20.RESISTANCE.armor'}}</label>
+            <label>{{localize 'FLAGSHIP2D20.RESISTANCE.armor'}}</label>
             <input type="number" class="borderless num-short-2" name="system.armorResistance.value" value="{{system.armorResistance.value}}" data-dtype="Number" min="0" />
         </div>
         <div class="label-number-box blue">
-            <label>{{localize 'AC2D20.RESISTANCE.courage'}}</label>
+            <label>{{localize 'FLAGSHIP2D20.RESISTANCE.courage'}}</label>
             <input type="number" class="borderless num-short-2" name="system.courageResistance.value" value="{{system.courageResistance.value}}" data-dtype="Number" min="0" />
         </div>
         <div class="label-number-box blue">
-            <label>{{localize 'AC2D20.TEMPLATES.Power'}}</label>
+            <label>{{localize 'FLAGSHIP2D20.TEMPLATES.Power'}}</label>
             <span>
                 <input type="number" class="borderless num-short-2" name="system.power.value" value="{{system.power.value}}" data-dtype="Number" min="0" />
                 <label>/</label>
@@ -43,7 +43,7 @@
     </div>
     <div style="display: flex; flex-direction: column;">
         <div class="section-title">
-            <h3 class="blue">{{localize "AC2D20.TEMPLATES.Truths"}}</h3>
+            <h3 class="blue">{{localize "FLAGSHIP2D20.TEMPLATES.Truths"}}</h3>
             <span class="right-slope blue"></span>
         </div>
         <div class="textbox">
@@ -56,7 +56,7 @@
     <div>
         <div style="margin-bottom: 2rem;">
             <div class="section-title">
-                <h3 class="blue">{{localize "AC2D20.TEMPLATES.Skills"}}</h3>
+                <h3 class="blue">{{localize "FLAGSHIP2D20.TEMPLATES.Skills"}}</h3>
                 <span class="right-slope blue"></span>
             </div>
             <ul class="items-list-npc">
@@ -81,7 +81,7 @@
         </div>
         <div style="margin-bottom: 2rem;">
             <div class="section-title">
-                <h3 class="blue">{{ localize "AC2D20.TEMPLATES.SpecialRules"}}<span class="item-create clickable" data-type="special_rule">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+                <h3 class="blue">{{ localize "FLAGSHIP2D20.TEMPLATES.SpecialRules"}}<span class="item-create clickable" data-type="special_rule">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
                 <span class="right-slope blue"></span>
             </div>
             <ul class="items-list-npc">
@@ -103,7 +103,7 @@
     <div>
         <div style="margin-bottom: 2rem;">
             <div class="section-title">
-                <h3 class="blue">{{localize "AC2D20.TEMPLATES.Weapons"}}<span class="item-create clickable" data-type="weapon" data-weight="3">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+                <h3 class="blue">{{localize "FLAGSHIP2D20.TEMPLATES.Weapons"}}<span class="item-create clickable" data-type="weapon" data-weight="3">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
                 <span class="right-slope blue"></span>
             </div>
             <ul class="items-list-npc">
@@ -119,14 +119,14 @@
                     </span>
                     <div class="skill-focuses" for="">
                         <span class="skill-focus focus-name" data-item-id="{{item._id}}"><strong>{{system.focus}}</strong>,</span>
-                        <span>{{localize "AC2D20.TEMPLATES.RANGE"}}: <strong>{{localize (concat 'AC2D20.RANGE.' system.range)}}</strong>,&nbsp;</span>
-                        <span>{{localize "AC2D20.TEMPLATES.Salvo"}}: <strong>{{system.salvo}}</strong>&nbsp;</span>
+                        <span>{{localize "FLAGSHIP2D20.TEMPLATES.RANGE"}}: <strong>{{localize (concat 'FLAGSHIP2D20.RANGE.' system.range)}}</strong>,&nbsp;</span>
+                        <span>{{localize "FLAGSHIP2D20.TEMPLATES.Salvo"}}: <strong>{{system.salvo}}</strong>&nbsp;</span>
                     </div>
                     <div class="qualities" style="font-size: 0.688rem;">
-                        <span>{{localize "AC2D20.WEAPONS.qualities"}}: </span>
+                        <span>{{localize "FLAGSHIP2D20.WEAPONS.qualities"}}: </span>
                         {{#each system.qualities as |qu quid|}}
                         {{#if (eq qu.value true)}}
-                        <span class="wpn-quality" data-item-id="{{item._id}}" style="font-size: 0.688rem;" data-tooltip="{{getTooltipFromConfigKey (concat 'AC2D20.WEAPONS.qualities.' quid)}}" data-tooltip-direction="LEFT"><strong>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' quid)}}</strong>, </span>
+                        <span class="wpn-quality" data-item-id="{{item._id}}" style="font-size: 0.688rem;" data-tooltip="{{getTooltipFromConfigKey (concat 'FLAGSHIP2D20.WEAPONS.qualities.' quid)}}" data-tooltip-direction="LEFT"><strong>{{localize (concat 'FLAGSHIP2D20.WEAPONS.weaponQuality.' quid)}}</strong>, </span>
                         {{/if}}
                         {{/each}}
                     </div>
@@ -136,16 +136,16 @@
         </div>
         <div style="margin-bottom: 2rem;">
             <div class="section-title">
-                <h3 class="blue">{{localize "AC2D20.TEMPLATES.Spells_Rituals"}}<span class="item-create clickable" data-type="spell">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+                <h3 class="blue">{{localize "FLAGSHIP2D20.TEMPLATES.Spells_Rituals"}}<span class="item-create clickable" data-type="spell">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
                 <span class="right-slope blue"></span>
             </div>
             <div style="padding: 3px 5px; background-color: #548da9">
-                <label style="color:#ebe7d7">{{localize "AC2D20.Spellcasting.SpellcastingType"}}</label>
+                <label style="color:#ebe7d7">{{localize "FLAGSHIP2D20.Spellcasting.SpellcastingType"}}</label>
                 {{#select system.spellcastingType}}
                 <select name="system.spellcastingType">
-                    <option value="traditional">{{localize "AC2D20.Spellcasting.traditional"}}</option>
-                    <option value="researcher">{{localize "AC2D20.Spellcasting.researcher"}}</option>
-                    <option value="dabbler">{{localize "AC2D20.Spellcasting.dabbler"}}</option>
+                    <option value="traditional">{{localize "FLAGSHIP2D20.Spellcasting.traditional"}}</option>
+                    <option value="researcher">{{localize "FLAGSHIP2D20.Spellcasting.researcher"}}</option>
+                    <option value="dabbler">{{localize "FLAGSHIP2D20.Spellcasting.dabbler"}}</option>
                 </select>
                 {{/select}}
             </div>

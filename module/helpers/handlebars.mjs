@@ -65,7 +65,7 @@ export const registerHandlebarsHelpers = function () {
     });
 
     /* -------------------------------------------- */
-    /*  AC2D20 HELPERS                             */
+    /*  Flagship2d20 HELPERS                             */
     /* -------------------------------------------- */
 
     Handlebars.registerHelper('damageFaIconClass', function (str) {
@@ -80,7 +80,7 @@ export const registerHandlebarsHelpers = function () {
     });
 
     Handlebars.registerHelper('getSkillFocusList', function (key) {
-        const _skill = CONFIG.AC2D20.SKILLS.filter((s) => s.key === key)
+        const _skill = CONFIG.FLAGSHIP2D20.SKILLS.filter((s) => s.key === key)
         return _skill[0].focuses;
     });
 
@@ -90,7 +90,7 @@ export const registerHandlebarsHelpers = function () {
             let effString = '';
             let tooltip = ''
             if (v.value) {
-                let tstr = 'AC2D20.WEAPONS.effects.'+ k;
+                let tstr = 'FLAGSHIP2D20.WEAPONS.effects.'+ k;
                 tooltip = Handlebars.helpers.getTooltipFromConfigKey(tstr)
                 effString += `<span data-tooltip="${tooltip}">${v.label}`;
                 if (v.rank) {
@@ -109,7 +109,7 @@ export const registerHandlebarsHelpers = function () {
             let quString = '';
             let tooltip = ''
             if (v.value) {
-                let tstr = 'AC2D20.WEAPONS.qualities.'+ k;
+                let tstr = 'FLAGSHIP2D20.WEAPONS.qualities.'+ k;
                 tooltip = Handlebars.helpers.getTooltipFromConfigKey(tstr)
                 quString += `<span data-tooltip="${tooltip}">${v.label}</span>`;
                 _qualities.push(quString)
@@ -141,11 +141,17 @@ export const registerHandlebarsHelpers = function () {
 
     Handlebars.registerHelper('getAttributeBonus', function (actor, weaponType) {
         if (weaponType == 'agi')
+        {
             return actor.system.attributes['bra'].bonus;
+        }
         else if (weaponType == 'coo')
+        {
             return actor.system.attributes['ins'].bonus;
+        }
         else if (weaponType == 'wil')
+        {
             return actor.system.attributes['wil'].bonus;
+        }
     });
 
     Handlebars.registerHelper('getArmorQualities', function (qualities) {

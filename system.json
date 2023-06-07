@@ -57,7 +57,7 @@
   "socket": true,
   "gridDistance": 1,
   "gridUnits": "m",
-  "url": "https://github.com/superseva/ac2d20",
-  "manifest": "https://github.com/superseva/ac2d20/releases/latest/download/system.json",
-  "download": "https://github.com/superseva/ac2d20/releases/download/v10.0.10/ac2d20.zip"
+  "url": "https://github.com/emersonp/parker2d20",
+  "manifest": "https://github.com/emersonp/parker2d20/releases/latest/download/system.json",
+  "download": "https://github.com/emersonp/parker2d20/releases/download/v10.0.10/ac2d20.zip"
 }

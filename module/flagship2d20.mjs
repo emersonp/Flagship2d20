@@ -33,8 +33,8 @@ Hooks.once('init', async function () {
     // accessible in global contexts.
 
     game.flagship2d20 = {
-        FlagshipActor: ACActor,
-        FlagshipItem: ACItem,
+        FlagshipActor: FlagshipActor,
+        FlagshipItem: FlagshipItem,
         Roller2D20,
         Dialog2d20,
         DialogD6

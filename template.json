@@ -160,7 +160,7 @@
 		},
 		"spell":{
 			"templates": ["base"],
-			"skill":"Academia",
+			"skill":"Know",
 			"focus":"",
 			"difficulty":1,
 			"cost":1,
@@ -196,7 +196,7 @@
 			"focus":"",
 			"stress":0,
 			"ammo":0,
-			"skill":"Fighting",
+			"skill":"Fight",
 			"effect":{
 				"area": { "label": "Area", "value": false, "description": "" },
 				"backlash": { "label": "Backlash", "value": false, "rank": 1, "description": "" },

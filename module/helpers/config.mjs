@@ -123,11 +123,11 @@ FLAGSHIP2D20.Size = ["Trivial", "Minor", "Major"];
 
 FLAGSHIP2D20.WEAPONS = {
   "range": {
-    "reach": "Flagship2d20.RANGE.reach",
-    "close": "Flagship2d20.RANGE.close",
-    "medium": "Flagship2d20.RANGE.medium",
-    "long": "Flagship2d20.RANGE.long",
-    "extreme": "Flagship2d20.RANGE.extreme"
+    "reach": "FLAGSHIP2D20.RANGE.reach",
+    "close": "FLAGSHIP2D20.RANGE.close",
+    "medium": "FLAGSHIP2D20.RANGE.medium",
+    "long": "FLAGSHIP2D20.RANGE.long",
+    "extreme": "FLAGSHIP2D20.RANGE.extreme"
   },
   "weaponTypes": [
     {

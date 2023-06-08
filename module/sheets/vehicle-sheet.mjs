@@ -1,4 +1,4 @@
-import { Flagship2d20 } from "../helpers/config.mjs";
+import { FLAGSHIP2D20 } from "../helpers/config.mjs";
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/effects.mjs";
 import { FlagshipActorSheet } from "./actor-sheet.mjs";
 

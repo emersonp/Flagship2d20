@@ -546,7 +546,7 @@ export class FlagshipActorSheet extends ActorSheet {
         html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
 
         /* -------------------------------------------- */
-        /* ADD RIGH CLICK CONTENT MENU
+        /* ADD RIGHT CLICK CONTENT MENU
         /* -------------------------------------------- */
         const editLabel = game.i18n.localize("FLAGSHIP2D20.EDIT");
         const deleteLabel = game.i18n.localize("FLAGSHIP2D20.DELETE");
@@ -582,7 +582,9 @@ export class FlagshipActorSheet extends ActorSheet {
                 },
             },
         ];
-        new ContextMenu(html.find(".editable-item"), null, menu_items);
+        console.log("PARKER: Adding context menu items.");
+        //new ContextMenu(html.find(".editable-item"), null, menu_items);
+        new ContextMenu(html, '.editable-item', menu_items);
 
 
         // ! DON'T LET NUMBER FIELDS EMPTY

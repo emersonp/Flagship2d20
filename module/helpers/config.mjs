@@ -1,6 +1,6 @@
-export const Flagship2d20 = {};
+export const FLAGSHIP2D20 = {};
 
-Flagship2d20.attributes = {
+FLAGSHIP2D20.attributes = {
   "foc": "Flagship2d20.AbilityFoc",
   "ner": "Flagship2d20.AbilityNer",
   "phy": "Flagship2d20.AbilityPhy",
@@ -8,7 +8,7 @@ Flagship2d20.attributes = {
   "sha": "Flagship2d20.AbilitySha",
 };
 
-Flagship2d20.abilityAbbreviations = {
+FLAGSHIP2D20.abilityAbbreviations = {
   "foc": "Flagship2d20.AbilityFocAbr",
   "ner": "Flagship2d20.AbilityNerAbr",
   "phy": "Flagship2d20.AbilityPhyAbr",
@@ -16,7 +16,7 @@ Flagship2d20.abilityAbbreviations = {
   "sha": "Flagship2d20.AbilityShaAbr",
 };
 
-Flagship2d20.SKILLS = [
+FLAGSHIP2D20.SKILLS = [
   {
     'label': 'CHARM',
     'key': "Charm",
@@ -119,9 +119,9 @@ Flagship2d20.SKILLS = [
   }  
 ];
 
-Flagship2d20.Size = ["Trivial", "Minor", "Major"];
+FLAGSHIP2D20.Size = ["Trivial", "Minor", "Major"];
 
-Flagship2d20.WEAPONS = {
+FLAGSHIP2D20.WEAPONS = {
   "range": {
     "reach": "Flagship2d20.RANGE.reach",
     "close": "Flagship2d20.RANGE.close",
@@ -145,7 +145,7 @@ Flagship2d20.WEAPONS = {
   ]
 }
 
-Flagship2d20.spellcastingTypes = {
+FLAGSHIP2D20.spellcastingTypes = {
   "traditional":"traditional",
   "researcher":"researcher",
   "dabbler":"dabbler"

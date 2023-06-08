@@ -81,6 +81,7 @@ export const registerHandlebarsHelpers = function () {
 
     Handlebars.registerHelper('getSkillFocusList', function (key) {
         const _skill = CONFIG.FLAGSHIP2D20.SKILLS.filter((s) => s.key === key)
+        console.log(_skill[0]);
         return _skill[0].focuses;
     });
 

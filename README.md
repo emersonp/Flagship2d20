@@ -9,7 +9,7 @@ This is the Flagship 2d20 system for Foundry.
 
 ## Compendiums 
 
-- Skills Compendium. List of Skills with their Focuses. Dragg the Skills you need from the compendium to the NPC sheets.
+- Skills Compendium. List of Skills with their Focuses. Drag the Skills you need from the compendium to the NPC sheets.
 - Macros Compendium. 2 Macros for rolling D20 and Stress(d6) dice. You can drag those to you macro bar.
 
 ## Featuring

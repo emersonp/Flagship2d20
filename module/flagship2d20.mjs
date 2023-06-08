@@ -7,7 +7,7 @@ import { FlagshipNPCSheet } from "./sheets/npc-sheet.mjs";
 import { FlagshipVehicleSheet } from "./sheets/vehicle-sheet.mjs";
 import { FlagshipItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
-import { Flagship2d20 } from "./helpers/config.mjs";
+import { FLAGSHIP2D20 } from "./helpers/config.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { registerHandlebarsHelpers } from "./helpers/handlebars.mjs"
 //Import Roll2D20

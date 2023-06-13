@@ -1,18 +1,21 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Germania+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 .cth-ico-cth:before {
   content: "\e900";
 }
 
-.cth-ico-cth-cross:before {
-  content: "\e901";
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/Gotham-Bold.otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
 @font-face {
   font-family: "cthulhu-icons";
   src: url("../fonts/cthulhu-icons.eot?h5tze8");
-  src: url("../fonts/cthulhu-icons.eot?h5tze8#iefix") format("embedded-opentype"), url("../fonts/cthulhu-icons.ttf?h5tze8") format("truetype"), url("../fonts/cthulhu-icons.woff?h5tze8") format("woff"), url("../fonts/cthulhu-icons.svg?h5tze8#cthulhu-icons") format("svg");
+  /* src: url("../fonts/cthulhu-icons.eot?h5tze8#iefix") format("embedded-opentype"), url("../fonts/cthulhu-icons.ttf?h5tze8") format("truetype"), url("../fonts/cthulhu-icons.woff?h5tze8") format("woff"), url("../fonts/cthulhu-icons.svg?h5tze8#cthulhu-icons") format("svg"); */
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -33,6 +36,10 @@
 
 .cth-ico-cth:before {
   content: "";
+}
+
+.cth-ico-cth-cross:before {
+  content: "\e901";
 }
 
 .cth-ico-cth-cross:before {
@@ -68,7 +75,7 @@
 
 /* Global styles */
 .window-app {
-  font-family: "Roboto", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 .window-app .window-content {
@@ -76,7 +83,7 @@
 }
 
 button {
-  font-family: "Germania One", cursive;
+  font-family: "Gotham", cursive;
   font-size: 16px;
   color: #494e31;
   background-color: #f0eeea;
@@ -88,11 +95,11 @@ button:hover {
 }
 
 .font-primary {
-  font-family: "Roboto", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 .font-secondary {
-  font-family: "Roboto", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 .font-size-11 {
@@ -124,7 +131,7 @@ a:hover {
   text-indent: 1px;
   text-overflow: '';
   margin-left: 5px;
-  font-family: "Germania One", cursive;
+  font-family: "Gotham", cursive;
 }
 
 .flagship2d20-dialog .resource {
@@ -135,7 +142,7 @@ a:hover {
 
 .flagship2d20-dialog .resource .title-label {
   padding: 5px;
-  font-family: "Germania One", cursive;
+  font-family: "Gotham", cursive;
   font-size: 1rem;
   color: #fff;
 }
@@ -186,7 +193,7 @@ a:hover {
 
 .flagship2d20-chat-message .content h2 {
   border: none;
-  font-family: "Germania One", cursive;
+  font-family: "Gotham", cursive;
   font-weight: 700;
 }
 
@@ -197,26 +204,26 @@ a:hover {
 
 .flagship2d20-chat-message .content .success-plaq {
   margin: 0 0 5px 0;
-  font-family: "Germania One", cursive;
+  font-family: "Gotham", cursive;
   color: #494e31;
   font-size: 16px;
 }
 
 .flagship2d20-chat-message .content .success-plaq .TN {
-  font-family: "Roboto", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
   font-size: 11px;
   font-weight: bold;
 }
 
 .flagship2d20-chat-message .content .complication-plaq {
   margin: 0 0 5px 0;
-  font-family: "Germania One", cursive;
+  font-family: "Gotham", cursive;
   color: #6b0b0b;
 }
 
 .flagship2d20-chat-message .content .damage-plaq {
   margin: 0 0 5px 0;
-  font-family: "Germania One", cursive;
+  font-family: "Gotham", cursive;
   font-size: 16px;
 }
 
@@ -297,7 +304,7 @@ a:hover {
 }
 
 .chat-item .item-name h3 {
-  font-family: "Germania One", cursive;
+  font-family: "Gotham", cursive;
   font-size: 1.5rem;
 }
 
@@ -538,7 +545,7 @@ a:hover {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 9px;
-  font-family: "Germania One", cursive;
+  font-family: "Gotham", cursive;
   margin-bottom: 10px;
 }
 
@@ -596,7 +603,7 @@ a:hover {
 }
 
 .flagship2d20 .item-form {
-  font-family: "Roboto", sans-serif;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 .flagship2d20 .sheet-header {
@@ -619,14 +626,6 @@ a:hover {
   background-color: #ebe7d7;
 }
 
-.flagship2d20 .sheet-header .paperclip {
-  position: absolute;
-  height: 60px;
-  margin-right: 10px;
-  border: none;
-  top: 23px;
-}
-
 .flagship2d20 .sheet-header .header-fields {
   flex: 1;
 }
@@ -638,7 +637,7 @@ a:hover {
 }
 
 .flagship2d20 .sheet-header h1.sheet-name {
-  font-family: "Germania One", cursive;
+  font-family: "Gotham", cursive;
   padding: 0;
   margin: 0;
   border-bottom: 0;
@@ -678,7 +677,7 @@ a:hover {
   padding: 5px 10px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  font-family: "Germania One", cursive;
+  font-family: "Gotham", cursive;
   color: #000;
   background-color: #ebe7d7;
   border: 1px solid #494e31;
@@ -737,7 +736,7 @@ a:hover {
 .flagship2d20 .section-title h3 {
   display: flex;
   align-items: center;
-  font-family: Germania One;
+  font-family: Gotham;
   color: #ebe7d7;
   background-color: #494e31;
   padding: 2px 5px;
@@ -782,7 +781,7 @@ a:hover {
 }
 
 .flagship2d20 .attribute-grid .attribute-cell.olive {
-  font-family: "Germania One", cursive;
+  font-family: "Gotham", cursive;
   background-color: #494e31;
 }
 
@@ -805,7 +804,7 @@ a:hover {
   font-size: 1.2rem;
   line-height: 1.2rem;
   height: 30px;
-  font-family: 'Germania One';
+  font-family: 'Gotham';
 }
 
 .flagship2d20 .derived-box h3 {
@@ -813,7 +812,7 @@ a:hover {
   margin: 0;
   color: #ebe7d7;
   background-color: #494e31;
-  font-family: Germania One;
+  font-family: Gotham;
 }
 
 .flagship2d20 .derived-box h3.minmax {

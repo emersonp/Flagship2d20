@@ -41,7 +41,7 @@ Hooks.once('init', async function () {
     };
 
     // Add custom constants for configuration.
-    CONFIG.FLAGSHIP2D20 = Flagship2d20;
+    CONFIG.FLAGSHIP2D20 = FLAGSHIP2D20;
 
     /**
    * Set an initiative formula for the system

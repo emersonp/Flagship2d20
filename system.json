@@ -31,10 +31,10 @@
       "flags": {}
     },
     {
-      "name": "flagship-2d20-macros",
-      "label": "Flagship 2d20 Macros",
+      "name": "flagship-macros",
+      "label": "Flagship Macros",
       "system": "flagship2d20",
-      "path": "packs/flagship-2d20-macros.db",
+      "path": "packs/flagship-macros",
       "type": "Macro",
       "private": false,
       "flags": {}

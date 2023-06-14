@@ -1,6 +1,6 @@
 # Flagship 2D20
 
-This is the Flagship 2d20 system for Foundry.
+This is the Flagship 2d20 system for Foundry. The Flagship 2d20 system is a tabletop role playing game and is part of the Modiphius 2d20 World Builder's Program.
 
 ## Sheets
 
@@ -15,6 +15,4 @@ This is the Flagship 2d20 system for Foundry.
 ## Featuring
 
 - The system supports Dice-So-Nice module and introduces its own stress dice shortcut ("s") that you can use in chat or in journals (example: "/r 1ds", "[[/r 1ds]]", "[[1ds]]"
-- IMPORTANT: The system doesn't provide any pre-populated content.
-
-
+- The system will include all necessary content to run the Flagship 2d20 system.

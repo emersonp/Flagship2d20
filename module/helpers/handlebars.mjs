@@ -154,7 +154,7 @@ export const registerHandlebarsHelpers = function () {
     });
 
     Handlebars.registerHelper('getAttributeBonus', function (actor, weaponType) {
-        if (weaponType == 'phy')
+        if (weaponType == 'vig')
         {
             return actor.system.attributes['ner'].bonus;
         }
@@ -162,9 +162,9 @@ export const registerHandlebarsHelpers = function () {
         {
             return actor.system.attributes['sha'].bonus;
         }
-        else if (weaponType == 'foc')
+        else if (weaponType == 'int')
         {
-            return actor.system.attributes['foc'].bonus;
+            return actor.system.attributes['pre'].bonus;
         }
     });
 

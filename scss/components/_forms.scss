@@ -189,11 +189,12 @@ nav{
     font-family: 'Gotham';
   }
   h3{
-    padding: 2px 5px; 
-    margin: 0;
-    color: $c-light;
     background-color: $c-green-olive;
+    color: $c-light;
     font-family: Gotham;
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 2px 5px; 
     &.minmax{
       padding-right: 5px; 
       background-color: $c-green-olive;

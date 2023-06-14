@@ -17,12 +17,12 @@ export class FlagshipActor extends Actor {
         
         // Carry capacity
         let carryCapacity = 6;
-        if(this.system.attributes.phy.value < 9){
+        if(this.system.attributes.vig.value < 9){
             carryCapacity = 6
-        }else if(this.system.attributes.phy.value == 9){
+        }else if(this.system.attributes.vig.value == 9){
             carryCapacity = 7
         }
-        else if(this.system.attributes.phy.value == 10 || this.system.attributes.phy.value == 11){
+        else if(this.system.attributes.vig.value == 10 || this.system.attributes.vig.value == 11){
             carryCapacity = 8
         }else{
             carryCapacity = 9
@@ -50,14 +50,20 @@ export class FlagshipActor extends Actor {
      * Prepare Character type specific data
      */
     _prepareCharacterData(actorData) {
-        if (this.type !== 'character') return;        
+        if (this.type !== 'character') 
+        {
+            return;        
+        }
     }    
 
     /**
      * Prepare NPC type specific data.
      */
     _prepareNpcData(actorData) {
-        if (this.type !== 'npc') return;        
+        if (this.type !== 'npc') 
+        {
+            return;        
+        }
     }
 
     /**
@@ -77,7 +83,7 @@ export class FlagshipActor extends Actor {
     _getCharacterRollData(data) {
         if (this.type !== 'character') return;
         // Copy the ability scores to the top level, so that rolls can use
-        // formulas like `@phy.value + 4`.
+        // formulas like `@vig.value + 4`.
         if (data.attributes) {
             for (let [k, v] of Object.entries(data.attributes)) {
                 data[k] = foundry.utils.deepClone(v);
@@ -123,7 +129,6 @@ export class FlagshipActor extends Actor {
             const packName = game.settings.get('flagship2d20', 'compendium-skills');
             if(!packName)
             {
-                console.log("PARKER: No packName");
                 packName = "flagship2d20.skills"
             }                
             let packSkills = await game.packs.get(packName).getDocuments();
@@ -138,7 +143,7 @@ export class FlagshipActor extends Actor {
     getRollShortcuts() {
         let out = {};
         // Attributes
-        for (const name of ["foc", "ner", "phy", "pre", "sha"]) {
+        for (const name of ["int", "ner", "pre", "sha", "vig"]) {
             out[name.substring(0, 3)] = this.system.attributes[name].value;
         }
         // Power

@@ -276,6 +276,7 @@ export class FlagshipActorSheet extends ActorSheet {
             const li = $(ev.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
             let isFocused = $(ev.currentTarget).hasClass('focused');
+            console.log("PARKER: Clicking on skill. item.system.defaultAttribute: ", item.system.defaultAttribute);
             this._onRollSkill(item.name, item.system.value, this.actor.system.attributes[item.system.defaultAttribute].value, isFocused);
         });
         // Change Skill Rank value
@@ -347,7 +348,7 @@ export class FlagshipActorSheet extends ActorSheet {
             let prefAttribute = "ner";
             if(this.actor.system.spellcastingType=='researcher')
             {
-                prefAttribute = "foc"
+                prefAttribute = "int"
             }
             else if(this.actor.system.spellcastingType=='dabbler')
             {
@@ -416,7 +417,7 @@ export class FlagshipActorSheet extends ActorSheet {
                 }
             } catch (err) { console.log(err) }
 
-            const attrValue = item.actor.type == 'vehicle' ? 6 : -1;
+            const attrValue = item.actor.type == 'vehicle' ? 5 : -1;
             // weaponType is actualy attribute abrevation
             const prefAttribute = item.system.weaponType;
             game.flagship2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.system, prefAttribute: prefAttribute, actorId:this.actor._id, itemId: item._id })
@@ -429,7 +430,7 @@ export class FlagshipActorSheet extends ActorSheet {
             const item = this.actor.items.get(li.data("itemId"));
             const itemId = li.data("itemId");
             let stressBonus = 0;
-            if (item.system.weaponType == 'phy')
+            if (item.system.weaponType == 'vig')
             {
                 stressBonus = item.actor.system.attributes['ner'].bonus;
             }
@@ -437,9 +438,9 @@ export class FlagshipActorSheet extends ActorSheet {
             {
                 stressBonus = item.actor.system.attributes['sha'].bonus;
             }
-            else if (item.system.weaponType == 'foc')
+            else if (item.system.weaponType == 'int')
             {
-                stressBonus = item.actor.system.attributes['foc'].bonus;
+                stressBonus = item.actor.system.attributes['pre'].bonus;
             }
             let stress = parseInt(item.system.stress) + parseInt(stressBonus);
             game.flagship2d20.DialogD6.createDialog({ rollName: item.name, diceNum: stress, flagship2d20Roll: null, itemId: itemId, actorId: this.actor._id })
@@ -582,7 +583,6 @@ export class FlagshipActorSheet extends ActorSheet {
                 },
             },
         ];
-        console.log("PARKER: Adding context menu items.");
         //new ContextMenu(html.find(".editable-item"), null, menu_items);
         new ContextMenu(html, '.editable-item', menu_items);
 
@@ -661,7 +661,7 @@ export class FlagshipActorSheet extends ActorSheet {
     }
     _onRollSkill(skillName, rank, attribute, focus) {
         let complication = 20 - this.actor.getComplicationFromInjuries();
-        game.flagship2d20.Dialog2d20.createDialog({ rollName: skillName, diceNum: 2, attribute: -1, skill: rank, focus: focus, complication: complication, actor: this.actor.system })
+        game.flagship2d20.Dialog2d20.createDialog({ rollName: skillName, diceNum: 2, attribute: attribute, skill: rank, focus: focus, complication: complication, actor: this.actor.system })
     }
 
     async _onItemSummary(event) {

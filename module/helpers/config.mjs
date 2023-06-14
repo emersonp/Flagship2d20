@@ -1,22 +1,32 @@
 export const FLAGSHIP2D20 = {};
 
 FLAGSHIP2D20.attributes = {
-  "foc": "Flagship2d20.AbilityFoc",
+  "int": "Flagship2d20.AbilityInt",
   "ner": "Flagship2d20.AbilityNer",
-  "phy": "Flagship2d20.AbilityPhy",
   "pre": "Flagship2d20.AbilityPre",
   "sha": "Flagship2d20.AbilitySha",
+  "vig": "Flagship2d20.AbilityVig",
 };
 
 FLAGSHIP2D20.abilityAbbreviations = {
-  "foc": "Flagship2d20.AbilityFocAbr",
+  "int": "Flagship2d20.AbilityIntAbr",
   "ner": "Flagship2d20.AbilityNerAbr",
-  "phy": "Flagship2d20.AbilityPhyAbr",
   "pre": "Flagship2d20.AbilityPreAbr",
   "sha": "Flagship2d20.AbilityShaAbr",
+  "vig": "Flagship2d20.AbilityVigAbr",
 };
 
 FLAGSHIP2D20.SKILLS = [
+  {
+    'label': 'ATHLETICS',
+    'key': "Athletics",
+    'focuses': ['Climbing', 'Jumping', 'Running', 'Swimming', 'Zero-G']
+  },
+  {
+    'label': 'AWARENESS',
+    'key': "Awareness",
+    'focuses': ['Hearing', 'Insight', 'Sight', 'Smell and Taste', 'Vigilance']
+  },
   {
     'label': 'CHARM',
     'key': "Charm",
@@ -30,27 +40,27 @@ FLAGSHIP2D20.SKILLS = [
   {
     'label': 'COOL',
     'key': "Nerves",
-    'focuses': ['Discipline', 'Initiative']
+    'focuses': ['Discipline', 'Poise', 'Spirit']
   },
   {
-    'label': 'FIGHT',
-    'key': "Fight",
-    'focuses': ['Hand-to-Hand', 'Improvised Weapons', 'Melee Weapons']
+    'label': 'ENDURANCE',
+    'key': "Endurance",
+    'focuses': ['Stamina', 'Immunity', 'Pain']
   },
   {
-    'label': 'FIX',
-    'key': "Fix",
-    'focuses': ['Electronics', 'Explosives', 'Mechanical']
+    'label': 'ENGINEERING',
+    'key': "Engineering",
+    'focuses': ['Electronics', 'Explosives', 'Mechanical', 'Software']
   },
   {
-    'label': 'FORCE',
-    'key': "Force",
-    'focuses': ['Breaking', 'Lifting', 'Throwing']
+    'label': 'FIGHTING',
+    'key': "Fighting",
+    'focuses': ['Hand-to-Hand', 'Improvised Weapons', 'Melee Weapons', 'Power Armor']
   },
   {
-    'label': 'HEAL',
+    'label': 'HEALING',
     'key': "Heal",
-    'focuses': ['Diagnosis', 'First Aid', 'Psychiatry', 'Surgery']
+    'focuses': ['Diagnosis', 'Psychiatry', 'Surgery', 'Treatment']
   },
   {
     'label': 'INVESTIGATE',
@@ -58,39 +68,29 @@ FLAGSHIP2D20.SKILLS = [
     'focuses': ['Forensics', 'Research', 'Searching']
   },
   {
-    'label': 'KNOW',
-    'key': "Know",
+    'label': 'KNOWLEDGE',
+    'key': "Knowledge",
     'focuses': ['Business', 'History', 'Language', 'Law', 'Science']
   },
   {
-    'label': 'LEAD',
-    'key': "Lead",
+    'label': 'LEADERSHIP',
+    'key': "Leadership",
     'focuses': ['Command', 'Inspire', 'Rhetoric']
   },
   {
-    'label': 'PERSUADE',
-    'key': "Persuade",
+    'label': 'PERSUASION',
+    'key': "Persuasion",
     'focuses': ['Bargain', 'Deceive', 'Intimidate']
   },
   {
-    'label': 'PILOT',
-    'key': "Pilot",
+    'label': 'PILOTING',
+    'key': "Piloting",
     'focuses': [  'Operations', 'Personal Craft', 'Shuttlecraft', 'Watercraft', 'Wheeled']
   },
   {
-    'label': 'RESIST',
-    'key': "Resist",
-    'focuses': ['Endure', 'Immunity', 'Pain']
-  },
-  {
-    'label': 'RESOURCEFULNESS',
-    'key': "Resourcefulness",
+    'label': 'RESOURCES',
+    'key': "Resources",
     'focuses': ['Acquisitions', 'Forgery', 'Preparedness', 'Wealth']
-  },
-  {
-    'label': 'SENSE',
-    'key': "Sense",
-    'focuses': ['Hearing', 'Sight', 'Smell and Taste', 'Vigilance']
   },
   {
     'label': 'SHOOT',
@@ -103,9 +103,9 @@ FLAGSHIP2D20.SKILLS = [
     'focuses': ['Camoflage', 'Disguise', 'Wilderness Stealth', 'Urban Stealth']
   },
   {
-    'label': 'STUNT',
-    'key': "Stunt",
-    'focuses': ['Climbing', 'Jumping', 'Running', 'Swimming', 'Zero-G']
+    'label': 'STRENGTH',
+    'key': "Strength",
+    'focuses': ['Breaking', 'Lifting', 'Throwing']
   },
   {
     'label': 'SURVIVAL',
@@ -140,7 +140,7 @@ FLAGSHIP2D20.WEAPONS = {
     },
     {
       'label': "Mental",
-      'bonusAttribute': 'foc'
+      'bonusAttribute': 'int'
     }
   ]
 }

@@ -78,7 +78,10 @@ export class FlagshipItemSheet extends ItemSheet {
         super.activateListeners(html);
 
         // Everything below here is only needed if the sheet is editable
-        if (!this.isEditable) return;
+        if (!this.isEditable) 
+        {
+            return;
+        }
 
         // SKILL AND FOCUS
         html.find('.focus-add').click(async (ev) => {
@@ -102,7 +105,10 @@ export class FlagshipItemSheet extends ItemSheet {
 
         // Effects.
         html.find(".effect-control").click(ev => {
-            if (this.item.isOwned) return ui.notifications.warn("Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update.")
+            if (this.item.isOwned)
+            {
+                return ui.notifications.warn("Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update.")
+            }
             onManageActiveEffect(ev, this.item)
         });
 

@@ -1,14 +1,14 @@
 {
-    "FLAGSHIP2D20.AbilityAbbr.foc": "foc",
+    "FLAGSHIP2D20.AbilityAbbr.int": "int",
     "FLAGSHIP2D20.AbilityAbbr.ner": "ner",
-    "FLAGSHIP2D20.AbilityAbbr.phy": "phy",
     "FLAGSHIP2D20.AbilityAbbr.pre": "pre",
     "FLAGSHIP2D20.AbilityAbbr.sha": "sha",
-    "FLAGSHIP2D20.Ability.foc": "Focus",
+    "FLAGSHIP2D20.AbilityAbbr.vig": "vig",
+    "FLAGSHIP2D20.Ability.int": "Intellect",
     "FLAGSHIP2D20.Ability.ner": "Nerves",
-    "FLAGSHIP2D20.Ability.phy": "Physique",
     "FLAGSHIP2D20.Ability.pre": "Presence",
     "FLAGSHIP2D20.Ability.sha": "Shadow",
+    "FLAGSHIP2D20.Ability.vig": "Vigor",
     "FLAGSHIP2D20.EffectCreate": "Create Effect",
     "FLAGSHIP2D20.EffectDelete": "Delete Effect",
     "FLAGSHIP2D20.EffectEdit": "Edit Effect",
@@ -131,7 +131,7 @@
     "FLAGSHIP2D20.SPELL": {
         "SpellTypes": {
             "ner": "Traditional",
-            "foc": "Researcher",
+            "int": "Researcher",
             "pre": "Dabbler"
         }
     },
@@ -239,11 +239,11 @@
         "Focus": "Focus",
         "TN": "TN",
         "Total": "Total",
-        "Use_Focus": "Use Focus",
+        "Use_Intellect": "Use Intellect",
         "Use_Nerves": "Use Nerves",
-        "Use_Physique": "Use Physique",
         "Use_Presence": "Use Presence",
         "Use_Shadow": "Use Shadow",
+        "Use_Vigor": "Use Vigor",
         "Weapon_Qualities": "WEAPON QUALITIES",
         "Weapon_Type": "Weapon Type",
         "Weapons": "Weapons",
@@ -320,9 +320,9 @@
             "Melee": "Melee",
             "Ranged": "Ranged",
             "Mental": "Mental",
-            "phy": "Melee",
+            "vig": "Melee",
             "ner": "Ranged",
-            "foc": "Mental"
+            "int": "Mental"
         }
     },
     "FLAGSHIP2D20.ARMOR": {

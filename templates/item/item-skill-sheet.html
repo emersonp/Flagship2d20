@@ -23,7 +23,17 @@
     <div class="tab attributes" data-group="primary" data-tab="attributes">
       {{!-- As you add new fields, add them in here! --}}
       <div class="flexrow resource green-field">
-        <label>{{localize "FLAGSHIP2D20.TEMPLATES.Skill_Value"}}</label>
+        <label>{{localize "FLAGSHIP2D20.TEMPLATES.Default_Attribute"}}</label>
+        <select class="select-attribute" name="system.defaultAttribute">
+          {{#select system.defaultAttribute}}
+          <option value="int">{{localize "FLAGSHIP2D20.Ability.int"}}</option>
+          <option value="ner">{{localize "FLAGSHIP2D20.Ability.ner"}}</option>
+          <option value="pre">{{localize "FLAGSHIP2D20.Ability.pre"}}</option>
+          <option value="sha">{{localize "FLAGSHIP2D20.Ability.sha"}}</option>
+          <option value="vig">{{localize "FLAGSHIP2D20.Ability.vig"}}</option>
+          {{/select}}
+        </select>
+        <label style="padding-left: 10px;">{{localize "FLAGSHIP2D20.TEMPLATES.Skill_Value"}}</label>
         <input type="number" name="system.value" value="{{system.value}}" style="text-align: center;">
       </div>
       <div class="flexcol">

@@ -1,3 +1,5 @@
-2023/06/13-12:18:37.424 ca8 Recovering log #9
-2023/06/13-12:18:37.436 ca8 Delete type=0 #9
-2023/06/13-12:18:37.440 ca8 Delete type=3 #8
+2023/06/13-20:01:03.745 64fc Recovering log #36
+2023/06/13-20:01:03.745 64fc Level-0 table #38: started
+2023/06/13-20:01:03.750 64fc Level-0 table #38: 2931 bytes OK
+2023/06/13-20:01:03.762 64fc Delete type=0 #36
+2023/06/13-20:01:03.764 64fc Delete type=3 #34

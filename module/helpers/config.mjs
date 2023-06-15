@@ -63,8 +63,8 @@ FLAGSHIP2D20.SKILLS = [
     'focuses': ['Diagnosis', 'Psychiatry', 'Surgery', 'Treatment']
   },
   {
-    'label': 'INVESTIGATE',
-    'key': "Investigate",
+    'label': 'INVESTIGATION',
+    'key': "Investigation",
     'focuses': ['Forensics', 'Research', 'Searching']
   },
   {
@@ -93,8 +93,8 @@ FLAGSHIP2D20.SKILLS = [
     'focuses': ['Acquisitions', 'Forgery', 'Preparedness', 'Wealth']
   },
   {
-    'label': 'SHOOT',
-    'key': "Shoot",
+    'label': 'SHOOTING',
+    'key': "Shooting",
     'focuses': ['Ancient Weapons', 'Close Quarters', 'Heavy Weapons', 'Pistols', 'Rifles']
   },
   {
@@ -132,7 +132,7 @@ FLAGSHIP2D20.WEAPONS = {
   "weaponTypes": [
     {
       'label': "Melee",
-      'bonusAttribute': 'pre'
+      'bonusAttribute': 'vig'
     },
     {
       'label': "Ranged",

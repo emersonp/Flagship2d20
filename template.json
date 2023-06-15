@@ -198,7 +198,7 @@
 			"focus":"",
 			"stress":0,
 			"ammo":0,
-			"skill":"Fight",
+			"skill":"Fighting",
 			"effect":{
 				"area": { "label": "Area", "value": false, "description": "" },
 				"backlash": { "label": "Backlash", "value": false, "rank": 1, "description": "" },

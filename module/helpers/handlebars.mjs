@@ -164,6 +164,7 @@ export const registerHandlebarsHelpers = function () {
         }
         else if (weaponType == 'int')
         {
+            console.log("Weapon type int?");
             return actor.system.attributes['pre'].bonus;
         }
     });

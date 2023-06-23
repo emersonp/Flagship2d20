@@ -146,8 +146,8 @@ export class FlagshipActor extends Actor {
         for (const name of ["int", "ner", "pre", "sha", "vig"]) {
             out[name.substring(0, 3)] = this.system.attributes[name].value;
         }
-        // Power
-        out['pow'] = this.system.power.value;
+        // PSI
+        out['psi'] = this.system.psi.value;
         return out;
     }
 }

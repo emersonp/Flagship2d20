@@ -56,9 +56,7 @@
 					"vig": {
 						"value": 6,
 						"bonus":0
-					
-					}
-					
+					}	
 				}
 			},
 			"derived": {
@@ -74,7 +72,7 @@
 					"max":0,
 					"value":0
 				},
-				"power":{
+				"psi":{
 					"max":0,
 					"value":0
 				},
@@ -87,9 +85,11 @@
 		},
 		"character": {
 			"templates": ["base", "stats", "derived"],
-			"nationality":"",
+			"position":"",
 			"rank":"",
 			"archetype":"",
+			"homeworld":"",
+			"upbringing":"",
 			"background":"",
 			"characteristic":"",
 			"spellcastingType":"traditional"			
@@ -162,7 +162,7 @@
 		},
 		"spell":{
 			"templates": ["base"],
-			"skill":"Know",
+			"skill":"Knowledge",
 			"focus":"",
 			"difficulty":1,
 			"cost":1,

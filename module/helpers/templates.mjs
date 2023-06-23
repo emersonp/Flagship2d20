@@ -8,7 +8,7 @@ export const preloadHandlebarsTemplates = async function () {
     "systems/flagship2d20/templates/actor/parts/actor-header.html",
     "systems/flagship2d20/templates/actor/parts/actor-abilities.html",
     "systems/flagship2d20/templates/actor/parts/actor-talents.html",
-    "systems/flagship2d20/templates/actor/parts/actor-spells.html",
+    "systems/flagship2d20/templates/actor/parts/actor-powers.html",
     "systems/flagship2d20/templates/actor/parts/actor-weapons.html",
     "systems/flagship2d20/templates/actor/parts/actor-armor.html",
     "systems/flagship2d20/templates/actor/parts/actor-skillkit.html",

@@ -5,7 +5,7 @@ This is the Flagship 2d20 system for Foundry. The Flagship 2d20 system is a tabl
 ## Sheets
 
 - The system provides sheets for Character, NPC and Vehicle Actor.
-- Item sheets for Weapons, Armor, Talents, Spells, Skill Kits, Special Rules and Equipment.
+- Item sheets for Weapons, Armor, Talents, Powers, Skill Kits, Special Rules and Equipment.
 
 ## Compendiums 
 

@@ -136,7 +136,7 @@
         </div>
         <div style="margin-bottom: 2rem;">
             <div class="section-title">
-                <h3 class="blue">{{localize "FLAGSHIP2D20.TEMPLATES.Powers_Rituals"}}<span class="item-create clickable" data-type="spell">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+                <h3 class="blue">{{localize "FLAGSHIP2D20.TEMPLATES.Powers_Rituals"}}<span class="item-create clickable" data-type="power">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
                 <span class="right-slope blue"></span>
             </div>
             <div style="padding: 3px 5px; background-color: #548da9">
@@ -150,8 +150,8 @@
                 {{/select}}
             </div>
             <ul class="items-list-npc">
-                {{#each spells as |item key|}}
-                <li class="item spell editable-item" data-item-id="{{item._id}}">
+                {{#each powers as |item key|}}
+                <li class="item power editable-item" data-item-id="{{item._id}}">
                     <div class="main-row">
                         <label class="item-name expandable-info clickable">{{item.name}}</label>
                         <!-- <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
@@ -159,8 +159,8 @@
                             <a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
                         </div> -->
                     </div>
-                    <div class="roll-spell skill-name clickable"><i class="fas fa-dice-d20"></i>&nbsp;{{item.system.skill}} <span class="focus-name">({{item.system.focus}})</span></div>
-                    <div class="roll-spell-cost skill-cost clickable">Cost: {{item.system.cost}}<span class="cth-ico-cth"></span></div>
+                    <div class="roll-power skill-name clickable"><i class="fas fa-dice-d20"></i>&nbsp;{{item.system.skill}} <span class="focus-name">({{item.system.focus}})</span></div>
+                    <div class="roll-power-cost skill-cost clickable">Cost: {{item.system.cost}}<span class="cth-ico-cth"></span></div>
                 </li>
                 {{/each}}
             </ul>

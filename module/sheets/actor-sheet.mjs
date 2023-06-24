@@ -156,7 +156,7 @@ export class FlagshipActorSheet extends ActorSheet {
 
         const skills = [];
         const talents = [];
-        const spells = [];
+        const powers = [];
         const weapons = [];
         const armor = [];
         const skillkits = [];
@@ -173,8 +173,8 @@ export class FlagshipActorSheet extends ActorSheet {
             else if (i.type === 'talent') {
                 talents.push(i);
             }
-            else if (i.type === 'spell') {
-                spells.push(i);
+            else if (i.type === 'power') {
+                powers.push(i);
             }
             else if (i.type === 'armor') {
                 armor.push(i);
@@ -201,7 +201,7 @@ export class FlagshipActorSheet extends ActorSheet {
         });
         context.skills = skills;
         context.talents = talents;
-        context.spells = spells;
+        context.powers = powers;
         context.armor = armor;
         context.skillkits = skillkits;
         context.equipment = equipment;
@@ -310,10 +310,10 @@ export class FlagshipActorSheet extends ActorSheet {
         });
         // * END TRUTHS
 
-        // * SPELLS GRID
+        // * POWERS GRID
         html.find('.cell-expander').click((event) => { this._onItemSummary(event) });
 
-        html.find('.roll-spell.clickable').click((event) => {
+        html.find('.roll-power.clickable').click((event) => {
             event.preventDefault();
             const li = $(event.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
@@ -360,7 +360,7 @@ export class FlagshipActorSheet extends ActorSheet {
 
         });
 
-        html.find('.roll-spell-cost.clickable').click((event) => {
+        html.find('.roll-power-cost.clickable').click((event) => {
             event.preventDefault();
             const li = $(event.currentTarget).parents(".item");
             const itemId = li.data("itemId");

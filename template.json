@@ -124,7 +124,7 @@
 			"weapon",
 			"armor",
 			"talent",			
-			"spell",			
+			"power",			
 			"skillkit",
 			"equipment",
 			"special_rule",
@@ -160,7 +160,7 @@
 			"templates": ["base"],
 			"keywords":""
 		},
-		"spell":{
+		"power":{
 			"templates": ["base"],
 			"skill":"Knowledge",
 			"focus":"",

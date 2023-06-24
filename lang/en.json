@@ -355,7 +355,7 @@
     },
     "TYPES.Item.armor": "Armor",
     "TYPES.Item.talent": "Talent",
-    "TYPES.Item.spell": "Spell",
+    "TYPES.Item.power": "Power",
     "TYPES.Item.skill": "Skill",
     "TYPES.Item.skillkit": "Skill Kit",
     "TYPES.Item.equipment": "Equipment",

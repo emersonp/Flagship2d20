@@ -94,7 +94,7 @@ export class FlagshipItem extends Item {
         itemData.isWeapon = this.type === "weapon";
         itemData.isArmor = this.type === "armor";
         itemData.isTalent = this.type === "talent";
-        itemData.isSpell = this.type === "spell";
+        itemData.isPower = this.type === "power";
         itemData.isSkillkit = this.type === "skillkit";
         itemData.isSkillkit = this.type === "skillkit";
         itemData.isEquipment = this.type === "equipment";

@@ -1,6 +1,6 @@
 <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
     <div class="section-title">
-        <h3>{{localize "FLAGSHIP2D20.TEMPLATES.Powers"}}<span class="item-create clickable" data-type="spell">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+        <h3>{{localize "FLAGSHIP2D20.TEMPLATES.Powers"}}<span class="item-create clickable" data-type="power">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
         <span class="right-slope olive"></span>
     </div>
     <div class="section-title">
@@ -32,13 +32,13 @@
             <!-- <div class="cell f1 align-center"></div> -->
         </div>
     </div>
-    {{#each spells as |item key|}}
-    <div class="item spell editable-item" data-item-id="{{item._id}}">
+    {{#each powers as |item key|}}
+    <div class="item power editable-item" data-item-id="{{item._id}}">
         <div class="row">
             <div class="cell f4 green cell-expander align-left align-center cell-name"> <img src="{{item.img}}" />{{item.name}}</div>
-            <div class="cell f3 roll-spell skill-name clickable align-center"><i class="fas fa-dice-d20"></i>&nbsp;{{item.system.skill}} ({{item.system.focus}})</div>
+            <div class="cell f3 roll-power skill-name clickable align-center"><i class="fas fa-dice-d20"></i>&nbsp;{{item.system.skill}} ({{item.system.focus}})</div>
             <div class="cell f1 align-center">{{item.system.difficulty}}</div>
-            <div class="cell f3 roll-spell-cost clickable align-center">{{item.system.cost}}<span class="cth-ico-cth"></span>&nbsp;{{item.system.costEffects}}</div>
+            <div class="cell f3 roll-power-cost clickable align-center">{{item.system.cost}}<span class="cth-ico-cth"></span>&nbsp;{{item.system.costEffects}}</div>
             <div class="cell f1 align-center">{{item.system.duration}}</div>
         </div>
 

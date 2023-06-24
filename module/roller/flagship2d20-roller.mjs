@@ -241,7 +241,7 @@ export class Roller2D20 {
                 item = actor.items.get(itemId)
             }
             if (item) {
-                if (item.type === 'spell') {
+                if (item.type === 'power') {
                     itemEffects = item.system.costEffects;
                 } else if (item.type === 'weapon') {
                     for (let de in item.system.effect) {

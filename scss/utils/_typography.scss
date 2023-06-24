@@ -10,13 +10,8 @@ $cth-ico-cth-cross: "A";
 
 @font-face {
     font-family: '#{$flagship-font-family}';
-    //src:  url('#{$flagship-font-path}/#{$flagship-font-family}.eot?h5tze8');
     src:
       url('#{$flagship-font-path}/#{$flagship-font-family}.otf?h5tze8') format('truetype');  
-      //url('#{$flagship-font-path}/#{$flagship-font-family}.ttf?h5tze8') format('truetype');
-      //url('#{$flagship-font-path}/#{$flagship-font-family}.eot?h5tze8#iefix') format('embedded-opentype'),
-      //url('#{$flagship-font-path}/#{$flagship-font-family}.woff?h5tze8') format('woff'),
-      //url('#{$flagship-font-path}/#{$flagship-font-family}.svg?h5tze8##{$flagship-font-family}') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;

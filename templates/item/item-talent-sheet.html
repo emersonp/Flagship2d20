@@ -15,13 +15,13 @@
         {{!-- Attributes Tab --}}
         <div class="tab flex-tab attributes" data-group="primary" data-tab="attributes">
             {{!-- As you add new fields, add them in here! --}}
-            <div class="resource green-field" style="display: flex;">
+            <div class="resource blue-field" style="display: flex;">
                 <label style="margin-right: 5px;">{{localize "FLAGSHIP2D20.TEMPLATES.Keywords"}}</label>
                 <input type="text" name="system.keywords" value="{{system.keywords}}">
             </div>
             <div class="section-title">
                 <h3>{{localize "FLAGSHIP2D20.TEMPLATES.Description"}}</h3>
-                <span class="right-slope olive"></span>
+                <span class="right-slope blue"></span>
             </div>
 
             {{editor descriptionHTML target="system.description" rollData=rollData button=true owner=owner editable=editable}}

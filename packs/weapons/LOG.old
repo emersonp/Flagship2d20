@@ -1,0 +1,5 @@
+2023/08/03-12:21:34.271 12bc Recovering log #32
+2023/08/03-12:21:34.271 12bc Level-0 table #34: started
+2023/08/03-12:21:34.275 12bc Level-0 table #34: 40186 bytes OK
+2023/08/03-12:21:34.286 12bc Delete type=0 #32
+2023/08/03-12:21:34.286 12bc Delete type=3 #30

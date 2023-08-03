@@ -72,11 +72,11 @@
 button {
   font-family: "Gotham", sans-serif;
   font-size: 14px;
-  color: #494e31;
+  color: #1A2238;
   background-color: #f0eeea;
 }
 button:hover {
-  box-shadow: 0 0 5px #759549;
+  box-shadow: 0 0 5px #548da9;
   cursor: pointer;
 }
 
@@ -97,17 +97,17 @@ button:hover {
 }
 
 input[type=text]:focus, input[type=number]:focus, input[type=password]:focus, input[type=date]:focus, input[type=time]:focus {
-  box-shadow: 0 0 5px #759549;
+  box-shadow: 0 0 5px #548da9;
 }
 
 a:hover {
-  text-shadow: 0 0 10px #494e31;
+  text-shadow: 0 0 10px #1A2238;
   cursor: pointer;
 }
 
 .rollable:hover, .rollable:focus {
   color: #000;
-  text-shadow: 0 0 10px #759549;
+  text-shadow: 0 0 10px #548da9;
   cursor: pointer;
 }
 
@@ -122,7 +122,7 @@ a:hover {
 .flagship2d20-dialog .resource {
   margin: 0 2px 5px;
   padding: 0 5px 0 0;
-  background-color: #759549;
+  background-color: #548da9;
 }
 .flagship2d20-dialog .resource .title-label {
   padding: 5px;
@@ -155,11 +155,11 @@ a:hover {
   color: #ebe7d7;
   font-weight: bold;
   text-align: center;
-  background-image: url(../assets/chat/d20-green-light.svg);
+  background-image: url(../assets/chat/d20-blue-light.svg);
 }
 .flagship2d20-dialog ul li .dice-icon.marked {
   color: #ebe7d7;
-  background-image: url(../assets/chat/d20-olive.svg);
+  background-image: url(../assets/chat/d20-blue.svg);
 }
 
 .chat-message {
@@ -181,7 +181,7 @@ a:hover {
 .flagship2d20-chat-message .content .success-plaq {
   margin: 0 0 5px 0;
   font-family: "Gotham", sans-serif;
-  color: #494e31;
+  color: #1A2238;
   font-size: 16px;
 }
 .flagship2d20-chat-message .content .success-plaq .TN {
@@ -505,13 +505,13 @@ a:hover {
   margin-bottom: 10px;
 }
 .flagship2d20.momentum-tracker .ap-resource.gm {
-  background-color: #494e31;
+  background-color: #1A2238;
 }
 .flagship2d20.momentum-tracker .ap-resource.party {
-  background-color: #759549;
+  background-color: #548da9;
 }
 .flagship2d20.momentum-tracker .ap-resource.maxMomentum-box {
-  background-color: #494e31;
+  background-color: #1A2238;
 }
 .flagship2d20.momentum-tracker .ap-resource .toggle-maxAp {
   position: absolute;
@@ -577,7 +577,7 @@ a:hover {
 .flagship2d20 .sheet-header .header-fields .post-item {
   padding-top: 2rem;
   cursor: pointer;
-  color: #494e31;
+  color: #1A2238;
 }
 .flagship2d20 .sheet-header h1.sheet-name {
   font-family: "Gotham", sans-serif;
@@ -603,11 +603,11 @@ a:hover {
 }
 .flagship2d20 nav.sheet-tabs .buttons {
   padding: 0 5px;
-  background-color: #494e31;
+  background-color: #1A2238;
   display: flex;
 }
 .flagship2d20 nav.sheet-tabs .buttons.blue {
-  background-color: #3d485a;
+  background-color: #1A2238;
 }
 .flagship2d20 nav.sheet-tabs .buttons .item {
   margin-top: 5px;
@@ -618,12 +618,12 @@ a:hover {
   font-family: "Gotham", sans-serif;
   color: #000;
   background-color: #ebe7d7;
-  border: 1px solid #494e31;
+  border: 1px solid #1A2238;
   text-shadow: none;
 }
 .flagship2d20 nav.sheet-tabs .buttons .item.active {
   color: #ebe7d7;
-  background-color: #759549;
+  background-color: #548da9;
   text-shadow: none;
   margin-top: 2px;
 }
@@ -631,7 +631,7 @@ a:hover {
   background-color: #548da9;
 }
 .flagship2d20 nav.sheet-tabs .buttons .item.blue {
-  border: 1px solid #3d485a;
+  border: 1px solid #1A2238;
 }
 .flagship2d20 nav.sheet-tabs img {
   border: none;
@@ -643,7 +643,7 @@ a:hover {
   height: 100%;
 }
 .flagship2d20 .sheet-body .tab .editor {
-  border: 1px solid #759549;
+  border: 1px solid #548da9;
   padding: 5px;
 }
 .flagship2d20 .sheet-body .tab.flex-tab {
@@ -665,23 +665,20 @@ a:hover {
   align-items: center;
   font-family: Gotham;
   color: #ebe7d7;
-  background-color: #494e31;
+  background-color: #1A2238;
   padding: 2px 5px;
   margin-bottom: 0;
   width: fit-content;
 }
 .flagship2d20 .section-title h3.blue {
-  background-color: #3d485a;
+  background-color: #1A2238;
 }
 .flagship2d20 .section-title .right-slope {
   min-width: 22px;
   background-repeat: no-repeat;
 }
-.flagship2d20 .section-title .right-slope.olive {
-  background-image: url(../assets/right-slope-olive2.webp);
-}
 .flagship2d20 .section-title .right-slope.blue {
-  background-image: url(../assets/right-slope-blue.webp);
+  background-image: url(../assets/right-slope-blue2.webp);
 }
 .flagship2d20 .attribute-grid {
   display: grid;
@@ -693,15 +690,12 @@ a:hover {
   align-items: center;
   padding: 1px;
   justify-content: center;
-  border: 1px solid #759549;
+  border: 1px solid #548da9;
   margin: 0 -1px -1px 0;
 }
-.flagship2d20 .attribute-grid .attribute-cell.green {
-  background-color: #759549;
-}
-.flagship2d20 .attribute-grid .attribute-cell.olive {
+.flagship2d20 .attribute-grid .attribute-cell.cerulean {
   font-family: "Gotham", sans-serif;
-  background-color: #494e31;
+  background-color: #1A2238;
 }
 .flagship2d20 .attribute-grid .attribute-cell input[type=number] {
   text-align: center;
@@ -722,7 +716,7 @@ a:hover {
   font-family: "Gotham";
 }
 .flagship2d20 .derived-box h3 {
-  background-color: #494e31;
+  background-color: #1A2238;
   color: #ebe7d7;
   font-family: Gotham;
   font-size: 1.1rem;
@@ -731,7 +725,7 @@ a:hover {
 }
 .flagship2d20 .derived-box h3.minmax {
   padding-right: 5px;
-  background-color: #494e31;
+  background-color: #1A2238;
 }
 .flagship2d20 .injuries-grid {
   display: grid;
@@ -739,7 +733,7 @@ a:hover {
 }
 .flagship2d20 .injuries-grid .injury-cell {
   padding: 2px;
-  border: 1px solid #759549;
+  border: 1px solid #548da9;
   margin: 0 -1px -1px 0;
 }
 .flagship2d20 .injuries-grid .injury-cell .controls {
@@ -787,7 +781,7 @@ a:hover {
 }
 .flagship2d20 .truths-grid .truth-cell {
   padding: 2px;
-  border: 1px solid #759549;
+  border: 1px solid #548da9;
   margin: 0 -1px -1px 0;
 }
 .flagship2d20 .truths-grid .truth-cell textarea {
@@ -798,13 +792,13 @@ a:hover {
 .flagship2d20 .skills {
   display: flex;
   flex-direction: column;
-  border: 1px solid #759549;
+  border: 1px solid #548da9;
 }
 .flagship2d20 .skills .skill {
   display: flex;
   flex-direction: row;
   flex: 0;
-  border-bottom: 1px solid #759549;
+  border-bottom: 1px solid #548da9;
   align-items: stretch;
 }
 .flagship2d20 .skills .skill .skill-name {
@@ -813,7 +807,7 @@ a:hover {
   align-items: center;
   padding: 5px;
   color: #ebe7d7;
-  background-color: #759549;
+  background-color: #548da9;
   font-weight: 900;
   cursor: pointer;
 }
@@ -821,8 +815,8 @@ a:hover {
   display: flex;
   align-items: center;
   padding: 0 5px;
-  border-left: 1px solid #759549;
-  border-right: 1px solid #759549;
+  border-left: 1px solid #548da9;
+  border-right: 1px solid #548da9;
 }
 .flagship2d20 .skills .skill .skill-focuses {
   display: flex;
@@ -838,7 +832,7 @@ a:hover {
 .flagship2d20 .skills .skill .skill-focuses .skill-focus.focused {
   cursor: pointer;
   color: beige;
-  background-color: #759549;
+  background-color: #548da9;
   border-radius: 3px;
   padding: 0 2px;
 }
@@ -848,10 +842,10 @@ a:hover {
 .flagship2d20 .flagship-grid {
   display: flex;
   flex-direction: column;
-  border: 1px solid #759549;
+  border: 1px solid #548da9;
 }
 .flagship2d20 .flagship-grid .item {
-  border-bottom: 1px solid #759549;
+  border-bottom: 1px solid #548da9;
 }
 .flagship2d20 .flagship-grid .item:last-child {
   border-bottom: none;
@@ -868,7 +862,7 @@ a:hover {
 .flagship2d20 .flagship-grid .item .row .cell {
   display: flex;
   padding: 5px;
-  border-right: 1px solid #759549;
+  border-right: 1px solid #548da9;
 }
 .flagship2d20 .flagship-grid .item .row .cell.align-center {
   align-items: center;
@@ -909,15 +903,15 @@ a:hover {
 .flagship2d20 .flagship-grid .item .row .cell.roll {
   cursor: pointer;
 }
-.flagship2d20 .flagship-grid .item .row .cell.green {
+.flagship2d20 .flagship-grid .item .row .cell.cerulean {
   color: #ebe7d7;
-  background-color: #759549;
+  background-color: #548da9;
   font-weight: 900;
 }
 .flagship2d20 .flagship-grid .item .item-summary {
   padding: 5px;
-  border-top: 1px solid #759549;
-  border-bottom: 1px solid #759549;
+  border-top: 1px solid #548da9;
+  border-bottom: 1px solid #548da9;
 }
 .flagship2d20 .label-number-box {
   display: flex;
@@ -926,7 +920,7 @@ a:hover {
   align-items: center;
   padding: 0.3rem;
   margin-bottom: 0.3rem;
-  background-color: #759549;
+  background-color: #548da9;
 }
 .flagship2d20 .label-number-box input[type=number] {
   height: 1.1rem;
@@ -1024,15 +1018,15 @@ a:hover {
 }
 .flagship2d20 .toggle-label.active {
   color: #ebe7d7;
-  background-color: #759549;
+  background-color: #548da9;
 }
 .flagship2d20 .resource {
   margin-bottom: 5px;
   align-items: center;
 }
-.flagship2d20 .resource.green-field {
+.flagship2d20 .resource.blue-field {
   padding: 5px;
-  background-color: #494e31;
+  background-color: #1A2238;
   color: #ebe7d7;
 }
 .flagship2d20 .resource-label {
@@ -1090,7 +1084,7 @@ a:hover {
   padding: 0;
   align-items: center;
   background: rgba(0, 0, 0, 0.05);
-  border: #759549;
+  border: #548da9;
   font-weight: bold;
 }
 .flagship2d20 .items-header > * {
@@ -1165,11 +1159,11 @@ a:hover {
   padding: 0 8px;
 }
 .flagship2d20 .item-control {
-  color: #494e31;
+  color: #1A2238;
   margin-right: 3px;
 }
 .flagship2d20 .item-control.blue {
-  color: #3d485a;
+  color: #1A2238;
 }
 .flagship2d20 .item-control.item-unequipped,
 .flagship2d20 .item-control .item-unstashed,

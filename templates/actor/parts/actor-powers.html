@@ -1,7 +1,7 @@
 <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
     <div class="section-title">
         <h3>{{localize "FLAGSHIP2D20.TEMPLATES.Powers"}}<span class="item-create clickable" data-type="power">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
-        <span class="right-slope olive"></span>
+        <span class="right-slope blue"></span>
     </div>
     <div class="section-title">
         <h3>{{localize "FLAGSHIP2D20.Spellcasting.SpellcastingType"}}</h3>
@@ -12,18 +12,18 @@
             <option value="dabbler">{{localize "FLAGSHIP2D20.Spellcasting.dabbler"}}</option>
         </select>
         {{/select}}
-        <span class="right-slope olive"></span>
+        <span class="right-slope blue"></span>
     </div>
     <div class="section-title" style="border: 1px solid #759549;">
         <h3>{{localize "FLAGSHIP2D20.TEMPLATES.PSI"}}</h3>
-        <span class="right-slope olive"></span>
+        <span class="right-slope blue"></span>
         <input type="number" name="system.psi.value" value="{{system.psi.value}}" class="borderless num-short-3" style="height: 22px;">
     </div>
 </div>
 <div class="flagship-grid">
     <div class="item">
         <div class="row">
-            <div class="cell f4 green" style="background-color: #494e31;">{{localize "FLAGSHIP2D20.UI.Name"}}</div>
+            <div class="cell f4 cerulean" style="background-color: #494e31;">{{localize "FLAGSHIP2D20.UI.Name"}}</div>
             <div class="cell f3 align-center">{{localize "FLAGSHIP2D20.TEMPLATES.skill_focus"}}</div>
             <!-- <div class="cell f2">Focus</div> -->
             <div class="cell f1 align-center">{{localize "FLAGSHIP2D20.TEMPLATES.Diff"}}</div>
@@ -35,7 +35,7 @@
     {{#each powers as |item key|}}
     <div class="item power editable-item" data-item-id="{{item._id}}">
         <div class="row">
-            <div class="cell f4 green cell-expander align-left align-center cell-name"> <img src="{{item.img}}" />{{item.name}}</div>
+            <div class="cell f4 cerulean cell-expander align-left align-center cell-name"> <img src="{{item.img}}" />{{item.name}}</div>
             <div class="cell f3 roll-power skill-name clickable align-center"><i class="fas fa-dice-d20"></i>&nbsp;{{item.system.skill}} ({{item.system.focus}})</div>
             <div class="cell f1 align-center">{{item.system.difficulty}}</div>
             <div class="cell f3 roll-power-cost clickable align-center">{{item.system.cost}}<span class="cth-ico-cth"></span>&nbsp;{{item.system.costEffects}}</div>

@@ -8,11 +8,11 @@
 button{
   font-family: $font-gotham;
   font-size: 14px;
-  color: $c-green-olive;
+  color: $c-blue-dark;
   background-color: $c-beige;
   &:hover {
-    //text-shadow: 0 0 10px $c-green-light;
-    box-shadow: 0 0 5px $c-green-light;
+    //text-shadow: 0 0 10px $c-blue-light;
+    box-shadow: 0 0 5px $c-blue-light;
     cursor: pointer;
   }
 }
@@ -34,12 +34,12 @@ button{
 }
 
 input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="time"]:focus {
-  box-shadow: 0 0 5px $c-green-light;
+  box-shadow: 0 0 5px $c-blue-light;
 }
 
 a{
   &:hover{
-    text-shadow: 0 0 10px $c-green-olive;
+    text-shadow: 0 0 10px $c-blue-dark;
     cursor: pointer;
   }
 }
@@ -47,7 +47,7 @@ a{
   &:hover,
   &:focus {
     color: #000;
-    text-shadow: 0 0 10px $c-green-light;
+    text-shadow: 0 0 10px $c-blue-light;
     cursor: pointer;
   }
 }
@@ -67,8 +67,8 @@ a{
 	.resource {
 		margin: 0 2px 5px;
 		padding: 0 5px 0 0;
-		background-color: $c-green-light;
-    //border: 1px solid $c-green-light ;
+		background-color: $c-blue-light;
+    //border: 1px solid $c-blue-light ;
 		.title-label {
 			padding: 5px;
 			font-family: $font-gotham;
@@ -100,10 +100,10 @@ a{
 				color: $c-light;
 				font-weight: bold;
 				text-align: center;
-				background-image: url(../assets/chat/d20-green-light.svg);
+				background-image: url(../assets/chat/d20-blue-light.svg);
 				&.marked {
 					color: $c-light;
-					background-image: url(../assets/chat/d20-olive.svg);
+					background-image: url(../assets/chat/d20-blue.svg);
 				}
 			}
 		}
@@ -129,7 +129,7 @@ a{
 		.success-plaq {
 			margin: 0 0 5px 0;
 			font-family: $font-gotham;
-      color: $c-green-olive;
+      color: $c-blue-dark;
 			//padding: 10px;
 			font-size: 16px;
 			//background-image: url(../assets/chat/green-placq.webp);

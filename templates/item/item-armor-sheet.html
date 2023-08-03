@@ -20,7 +20,7 @@
                 <div class="resource-row bgOdd">
                     <div class="section-title">
                         <h3>{{localize "FLAGSHIP2D20.TEMPLATES.Resistance"}}</h3>
-                        <span class="right-slope olive"></span>
+                        <span class="right-slope blue"></span>
                     </div>
                     <input type="number" name="system.resistance" value="{{system.resistance}}" style="text-align:center">
                 </div>
@@ -28,7 +28,7 @@
                 <div class="resource-row">
                     <div class="section-title">
                         <h3>{{localize "FLAGSHIP2D20.TEMPLATES.Qualities"}}</h3>
-                        <span class="right-slope olive"></span>
+                        <span class="right-slope blue"></span>
                     </div>
                     <div class="items-list" style="border: 1px solid #759549;">
                         {{#each system.qualities as |item key|}}
@@ -43,7 +43,7 @@
             </div>
             <div class="section-title">
                 <h3>{{localize "FLAGSHIP2D20.TEMPLATES.Description"}}</h3>
-                <span class="right-slope olive"></span>
+                <span class="right-slope blue"></span>
             </div>
             {{editor descriptionHTML target="system.description" rollData=rollData button=true owner=owner editable=editable}}
 

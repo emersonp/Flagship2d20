@@ -142,7 +142,7 @@
 				"quantity": 1,
 				"rarity": 0,
 				"stashed": false,
-				"restriction":0
+				"restriction":1
 			},
 			"equipable": {
 				"equippable": true,
@@ -197,13 +197,15 @@
 			"range":"close",
 			"focus":"",
 			"stress":0,
-			"ammo":0,
+			"ammo":3,
 			"skill":"Fighting",
 			"effect":{
 				"area": { "label": "Area", "value": false, "description": "" },
 				"backlash": { "label": "Backlash", "value": false, "rank": 1, "description": "" },
+				"destructive": { "label": "Destructive", "value": false, "description": "" },
 				"drain": { "label": "Drain", "value": false, "description": "" },
 				"intense": { "label": "Intense", "value": false, "description": "" },
+				"knockdown": { "label": "Knockdown", "value": false, "description": "" },
 				"persistent": { "label": "Persistent", "value": false, "rank": 1, "description": "" },
 				"piercing": { "label": "Piercing", "value": false, "rank": 1, "description": "" },
 				"snare": { "label": "Snare", "value": false, "description": "" },
@@ -224,10 +226,15 @@
 				"hunger": { "label": "Hunger", "value": false, "description": "" },
 				"inaccurate": { "label": "Inaccurate", "value": false, "description": "" },
 				"indirect": { "label": "Indirect", "value": false, "description": "" },
+				"longReach": { "label": "Long Reach", "value": false, "description": "" },
 				"munition": { "label": "Munition", "value": false, "description": "" },
 				"parrying": { "label": "Parrying", "value": false, "description": "" },				
 				"reliable": { "label": "Reliable", "value": false, "description": "" },
+				"shield": { "label": "Shield", "value": false, "description": "" },
+				"spray": { "label": "Spray", "value": false, "description": "" },
+				"steady": { "label": "Steady", "value": false, "description": "" },
 				"subtle": { "label": "Subtle", "value": false, "description": "" },
+				"unbalanced": { "label": "Unbalanced", "value": false, "description": "" },
 				"unreliable": { "label": "Unreliable", "value": false, "description": "" }
 			}
 		},

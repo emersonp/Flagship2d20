@@ -28,7 +28,7 @@ input[type="number"] {
 	padding: 3px;	
 	&.active {
 		color: $c-light;
-		background-color:$c-green-light;
+		background-color:$c-blue-light;
 	}
 }
 
@@ -36,9 +36,9 @@ input[type="number"] {
 .resource{
 	margin-bottom: 5px;
 	align-items: center;
-	&.green-field{
+	&.blue-field{
 		padding: 5px;
-		background-color: $c-green-olive;
+		background-color: $c-blue-dark;
 		color: $c-light;
 	}
 }

@@ -27,7 +27,7 @@
     .post-item{
       padding-top: 2rem;
       cursor: pointer;
-      color: $c-green-olive;
+      color: $c-blue-dark;
     }
   }
 
@@ -57,7 +57,7 @@ nav{
     margin: 0;   
     .buttons{
       padding: 0 5px;
-      background-color: $c-green-olive;
+      background-color: $c-blue-dark;
       display: flex;
       &.blue{
         background-color: $c-blue-dark;
@@ -71,11 +71,11 @@ nav{
         font-family: $font-gotham;
         color: $c-black;
         background-color: $c-light;
-        border: 1px solid $c-green-olive;
+        border: 1px solid $c-blue-dark;
         text-shadow: none;        
         &.active{
           color: $c-light;
-          background-color: $c-green-light;
+          background-color: $c-blue-light;
           text-shadow: none;
           margin-top: 2px;
         }
@@ -98,7 +98,7 @@ nav{
   height: 100%; 
 }
 .sheet-body .tab .editor{
-  border: 1px solid $c-green-light;
+  border: 1px solid $c-blue-light;
   padding: 5px;
 }
 .sheet-body .tab {
@@ -128,7 +128,7 @@ nav{
     align-items: center;
     font-family: Gotham;
     color: $c-light;
-    background-color: $c-green-olive;
+    background-color: $c-blue-dark;
     padding: 2px 5px;
     margin-bottom: 0;
     width: fit-content;
@@ -139,11 +139,8 @@ nav{
   .right-slope{
     min-width: 22px;
     background-repeat: no-repeat;
-    &.olive{
-      background-image: url(../assets/right-slope-olive2.webp);
-    }
     &.blue{
-      background-image: url(../assets/right-slope-blue.webp);
+      background-image: url(../assets/right-slope-blue2.webp);
     }
   }  
 }
@@ -158,14 +155,11 @@ nav{
     align-items: center;
     padding: 1px;
     justify-content: center;
-    border: 1px solid $c-green-light;
+    border: 1px solid $c-blue-light;
     margin:0 -1px -1px 0;
-    &.green{
-      background-color: $c-green-light;
-    }
-    &.olive{
+    &.cerulean{
       font-family: $font-gotham;
-      background-color: $c-green-olive;
+      background-color: $c-blue-dark;
     }
     input[type="number"] {
       text-align: center;
@@ -190,7 +184,7 @@ nav{
     font-family: 'Gotham';
   }
   h3{
-    background-color: $c-green-olive;
+    background-color: $c-blue-dark;
     color: $c-light;
     font-family: Gotham;
     font-size: 1.1rem;
@@ -198,7 +192,7 @@ nav{
     padding: 2px 5px; 
     &.minmax{
       padding-right: 5px; 
-      background-color: $c-green-olive;
+      background-color: $c-blue-dark;
     }
   }
 }
@@ -239,7 +233,7 @@ nav{
     }
     
     padding: 2px;
-    border: 1px solid $c-green-light;
+    border: 1px solid $c-blue-light;
     margin:0 -1px -1px 0;
     .injury-text{
       padding: 0;
@@ -258,7 +252,7 @@ nav{
   margin-bottom: 10px;
   .truth-cell {
     padding: 2px;
-    border: 1px solid $c-green-light;
+    border: 1px solid $c-blue-light;
     margin:0 -1px -1px 0;
     textarea{
       resize: none;
@@ -271,13 +265,13 @@ nav{
 .skills{
   display: flex;
   flex-direction: column;
-  border: 1px solid $c-green-light;
+  border: 1px solid $c-blue-light;
   
   .skill{
     display: flex;
     flex-direction: row;
     flex: 0;
-    border-bottom: 1px solid $c-green-light;
+    border-bottom: 1px solid $c-blue-light;
     align-items: stretch;  
     .skill-name{
       display: flex;
@@ -285,7 +279,7 @@ nav{
       align-items: center;
       padding: 5px;
       color: $c-light;
-      background-color: $c-green-light;      
+      background-color: $c-blue-light;      
       font-weight: 900;
       cursor: pointer;
     }
@@ -293,8 +287,8 @@ nav{
       display: flex;
       align-items: center;
       padding: 0 5px;
-      border-left: 1px solid $c-green-light;
-      border-right: 1px solid $c-green-light;     
+      border-left: 1px solid $c-blue-light;
+      border-right: 1px solid $c-blue-light;     
     }
     .skill-focuses{
       display: flex;
@@ -308,7 +302,7 @@ nav{
         &.focused{
           cursor: pointer;
           color:beige;
-          background-color: $c-green-light;
+          background-color: $c-blue-light;
           border-radius: 3px;
           padding: 0 2px;
         }
@@ -326,9 +320,9 @@ nav{
 .flagship-grid{
   display: flex;
   flex-direction: column;
-  border: 1px solid $c-green-light;
+  border: 1px solid $c-blue-light;
   .item{
-    border-bottom: 1px solid $c-green-light;
+    border-bottom: 1px solid $c-blue-light;
     &:last-child{
       border-bottom: none;
     }
@@ -344,7 +338,7 @@ nav{
       .cell{
         display: flex;
         padding: 5px;
-        border-right: 1px solid $c-green-light;   
+        border-right: 1px solid $c-blue-light;   
         //text-align: center;  
         //justify-content: center;
         &.align-center{
@@ -388,17 +382,17 @@ nav{
         &.roll{
           cursor: pointer;
         }
-        &.green{
+        &.cerulean{
           color: $c-light;
-          background-color: $c-green-light;      
+          background-color: $c-blue-light;      
           font-weight: 900;
         }      
       }      
     }  
     .item-summary{
       padding: 5px;
-      border-top: 1px solid $c-green-light;
-      border-bottom: 1px solid $c-green-light;
+      border-top: 1px solid $c-blue-light;
+      border-bottom: 1px solid $c-blue-light;
     }
   }
 }
@@ -411,7 +405,7 @@ nav{
   align-items: center;
   padding: 0.3rem;
   margin-bottom: 0.3rem;
-  background-color: $c-green-light;
+  background-color: $c-blue-light;
   input[type="number"]{
     height: 1.1rem;
   }

@@ -22,20 +22,47 @@
   ],
   "packs": [
     {
-      "name": "skills",
-      "label": "Skills",
-      "system": "flagship2d20",
-      "path": "packs/skills.db",
-      "type": "Item",
-      "private": false,
-      "flags": {}
-    },
-    {
       "name": "flagship-macros",
       "label": "Flagship Macros",
       "system": "flagship2d20",
       "path": "packs/flagship-macros",
       "type": "Macro",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "armor",
+      "label": "Armor",
+      "system": "flagship2d20",
+      "path": "packs/armor",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "skills",
+      "label": "Skills",
+      "system": "flagship2d20",
+      "path": "packs/skills",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "talents",
+      "label": "Talents",
+      "system": "flagship2d20",
+      "path": "packs/talents",
+      "type": "Item",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "weapons",
+      "label": "Weapons",
+      "system": "flagship2d20",
+      "path": "packs/weapons",
+      "type": "Item",
       "private": false,
       "flags": {}
     }

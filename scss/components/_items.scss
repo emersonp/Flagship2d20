@@ -5,7 +5,7 @@
   padding: 0;
   align-items: center;
   background: rgba(0, 0, 0, 0.05);
-  border: $c-green-light;
+  border: $c-blue-light;
   font-weight: bold;
   > * {
     font-size: 14px;
@@ -106,7 +106,7 @@
 }
 
 .item-control{
-  color: $c-green-olive;
+  color: $c-blue-dark;
   &.blue{
     color: $c-blue-dark;
   }

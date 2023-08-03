@@ -2,7 +2,7 @@
   "id": "flagship2d20",
   "title": "Flagship 2d20",
   "description": "The official 2d20 System for Parker for FoundryVTT",
-  "version": "1.1.10",
+  "version": "1.2.0",
   "compatibility": {
     "minimum": "11",
     "verified": "11",

@@ -111,7 +111,7 @@ export class FlagshipActor extends Actor {
         await super._preCreate(data, options, user);
         // set icon based on actor type    
         if(data.img == undefined){  
-            let ico = `systems/flagship2d20/assets/doc-icons/${this.type}.svg`;
+            let ico = `systems/flagship2d20rpg/assets/doc-icons/${this.type}.svg`;
             this.updateSource({ 'img': ico });
         }
         // Setup Tokens

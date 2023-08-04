@@ -11,7 +11,7 @@ export class FlagshipActorSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["flagship2d20", "sheet", "actor"],
-            template: "systems/flagship2d20/templates/actor/actor-sheet.html",
+            template: "systems/flagship2d20rpg/templates/actor/actor-sheet.html",
             width: 720,
             height: 780,
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "abilities" }]
@@ -20,7 +20,7 @@ export class FlagshipActorSheet extends ActorSheet {
 
     /** @override */
     get template() {
-        return `systems/flagship2d20/templates/actor/actor-${this.actor.type}-sheet.html`;
+        return `systems/flagship2d20rpg/templates/actor/actor-${this.actor.type}-sheet.html`;
     }
 
     /* -------------------------------------------- */

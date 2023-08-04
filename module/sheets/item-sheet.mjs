@@ -18,7 +18,7 @@ export class FlagshipItemSheet extends ItemSheet {
 
     /** @override */
     get template() {
-        const path = "systems/flagship2d20/templates/item";
+        const path = "systems/flagship2d20rpg/templates/item";
         return `${path}/item-${this.item.type}-sheet.html`;
     }
 

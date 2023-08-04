@@ -182,12 +182,12 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     dice3d.addDicePreset({
         type: "ds",
         labels: [
-            "systems/flagship2d20/assets/dice/d1.webp",
-            "systems/flagship2d20/assets/dice/d2.webp",
-            "systems/flagship2d20/assets/dice/d3.webp",
-            "systems/flagship2d20/assets/dice/d4.webp",
-            "systems/flagship2d20/assets/dice/d5.webp",
-            "systems/flagship2d20/assets/dice/d6.webp",
+            "systems/flagship2d20rpg/assets/dice/d1.webp",
+            "systems/flagship2d20rpg/assets/dice/d2.webp",
+            "systems/flagship2d20rpg/assets/dice/d3.webp",
+            "systems/flagship2d20rpg/assets/dice/d4.webp",
+            "systems/flagship2d20rpg/assets/dice/d5.webp",
+            "systems/flagship2d20rpg/assets/dice/d6.webp",
         ],
         system: "flagship2d20",
         colorset: "flagship2d20"

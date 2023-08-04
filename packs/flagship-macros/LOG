@@ -1,7 +1,3 @@
-2023/08/03-14:39:04.714 1ea4 Recovering log #128
-2023/08/03-14:39:04.724 1ea4 Delete type=0 #128
-2023/08/03-14:39:04.724 1ea4 Delete type=3 #127
-2023/08/03-18:15:30.780 a330 Level-0 table #132: started
-2023/08/03-18:15:30.780 a330 Level-0 table #132: 0 bytes OK
-2023/08/03-18:15:30.782 a330 Delete type=0 #130
-2023/08/03-18:15:30.796 a330 Manual compaction at level-0 from '!macros!Omx4VUtMn0aOinlU' @ 72057594037927935 : 1 .. '!macros!cONqeluVOYj00stU' @ 0 : 0; will stop at (end)
+2023/08/03-18:41:58.664 5d04 Recovering log #136
+2023/08/03-18:41:58.674 5d04 Delete type=0 #136
+2023/08/03-18:41:58.674 5d04 Delete type=3 #135

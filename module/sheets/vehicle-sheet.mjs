@@ -12,7 +12,7 @@ export class FlagshipVehicleSheet extends FlagshipActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["flagship2d20", "sheet", "actor"],
-            template: "systems/flagship2d20/templates/actor/vehicle-sheet.html",
+            template: "systems/flagship2d20rpg/templates/actor/vehicle-sheet.html",
             width: 550,
             height: 550,
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "abilities" }]

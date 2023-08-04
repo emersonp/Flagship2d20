@@ -58,7 +58,7 @@ export class Dialog2d20 extends Dialog {
         dialogData.prefAttribute = prefAttribute;
         dialogData.actorId = actorId;
         dialogData.itemId = itemId;
-        const html = await renderTemplate("systems/flagship2d20/templates/dialogs/dialog2d20.html", dialogData);
+        const html = await renderTemplate("systems/flagship2d20rpg/templates/dialogs/dialog2d20.html", dialogData);
         let d = new Dialog2d20(rollName, diceNum, attribute, skill, focus, complication, actor, prefAttribute, actorId, itemId, {
             title: rollName,
             content: html,

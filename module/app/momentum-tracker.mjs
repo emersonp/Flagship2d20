@@ -12,7 +12,7 @@ export class MomentumTracker extends Application {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             title: "AP Tracker",
-            template: "systems/flagship2d20/templates/ap/momentum-tracker.html",
+            template: "systems/flagship2d20rpg/templates/ap/momentum-tracker.html",
             classes: ["flagship2d20", "momentum-tracker"],
             id: "momentum-tracker-app",
             popOut: false,

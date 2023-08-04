@@ -49,7 +49,7 @@ export function registerSettings() {
         hint: "Location of the json file containing the text for qualities and damage effects.",
 		scope: "world",
 		config: true,
-		default: "systems/flagship2d20/assets/hovers.json",		
+		default: "systems/flagship2d20rpg/assets/hovers.json",		
 		type: String,
         filePicker: true,
         restricted: true,

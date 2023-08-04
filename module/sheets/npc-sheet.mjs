@@ -12,7 +12,7 @@ export class FlagshipNPCSheet extends FlagshipActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["flagship2d20", "sheet", "actor"],
-            template: "systems/flagship2d20/templates/actor/npc-sheet.html",
+            template: "systems/flagship2d20rpg/templates/actor/npc-sheet.html",
             width: 550,
             height: 780,
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "abilities" }]

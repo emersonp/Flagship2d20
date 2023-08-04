@@ -94,7 +94,7 @@ export class Roller2D20 {
             actorId: actorId,
             itemId: itemId
         }
-        const html = await renderTemplate("systems/flagship2d20/templates/chat/roll2d20.html", rollData);
+        const html = await renderTemplate("systems/flagship2d20rpg/templates/chat/roll2d20.html", rollData);
         let flagship2d20Roll = {}
         flagship2d20Roll.rollname = rollname;
         flagship2d20Roll.dicesRolled = dicesRolled;
@@ -273,7 +273,7 @@ export class Roller2D20 {
             itemEffects: itemEffects,
             itemQualities: itemQualities
         }
-        const html = await renderTemplate("systems/flagship2d20/templates/chat/rollD6.html", rollData);
+        const html = await renderTemplate("systems/flagship2d20rpg/templates/chat/rollD6.html", rollData);
         let flagship2d20Roll = {}
         flagship2d20Roll.rollname = rollname;
         flagship2d20Roll.dicesRolled = dicesRolled;

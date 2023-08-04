@@ -41,7 +41,7 @@ export function registerSettings() {
         name: 'Skills Compendium',
         scope: 'world',
         config: true,
-        default: "flagship2d20.skills",
+        default: "flagship2d20rpg.skills",
         type: String,
     });
     game.settings.register('flagship2d20', "hoversJsonLocation",{

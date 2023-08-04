@@ -129,7 +129,7 @@ export class FlagshipActor extends Actor {
             const packName = game.settings.get('flagship2d20', 'compendium-skills');
             if(!packName)
             {
-                packName = "flagship2d20.skills"
+                packName = "flagship2d20rpg.skills";
             }                
             let packSkills = await game.packs.get(packName).getDocuments();
             const items = this.items.map(i => i.toObject());

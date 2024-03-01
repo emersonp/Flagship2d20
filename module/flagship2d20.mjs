@@ -2,7 +2,7 @@
 import { FlagshipActor } from "./documents/actor.mjs";
 import { FlagshipItem } from "./documents/item.mjs";
 // Import sheet classes.
-import { FlagshipActorSheet } from "./sheets/actor-sheet.mjs";
+//import { FlagshipActorSheet } from "./sheets/actor-sheet.mjs";
 import { FlagshipNPCSheet } from "./sheets/npc-sheet.mjs";
 import { FlagshipVehicleSheet } from "./sheets/vehicle-sheet.mjs";
 import { FlagshipItemSheet } from "./sheets/item-sheet.mjs";
@@ -13,8 +13,8 @@ import { registerHandlebarsHelpers } from "./helpers/handlebars.mjs"
 //Import Roll2D20
 import { Roller2D20 } from "./roller/flagship2d20-roller.mjs"
 import { Dialog2d20 } from './roller/dialog2d20.js'
-import { DialogD6 } from './roller/dialogD6.js'
-import DieACChallenge from './roller/challengeDie.js'
+//import { DialogD6 } from './roller/dialogD6.js'
+//import DieACChallenge from './roller/challengeDie.js'
 //Settings
 import { registerSettings } from './settings.js';
 // Text Enrichers
@@ -37,7 +37,8 @@ Hooks.once('init', async function () {
         FlagshipItem: FlagshipItem,
         Roller2D20,
         Dialog2d20,
-        DialogD6
+        DialogD6,
+        MomentumTracker
     };
 
     // Add custom constants for configuration.

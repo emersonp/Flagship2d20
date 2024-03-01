@@ -27,7 +27,7 @@ export class MomentumTracker extends Application {
         this.data["isGM"] = game.user.isGM;
         this.data["partyMomentum"] = game.settings.get('flagship2d20', 'partyMomentum');
         this.data["gmMomentum"] = game.settings.get('flagship2d20', 'gmMomentum');
-        this.data["maxMomentum"] = game.settings.get('flagship2d20', 'maxMomentum');        
+        this.data["maxMomentum"] = game.settings.get('flagship2d20', 'maxMomentum');
         if(game.user.isGM) this.data["showGMMomentumToPlayers"] = true;
         else this.data["showGMMomentumToPlayers"] = game.settings.get('flagship2d20', 'gmMomentumShowToPlayers')
         if(game.user.isGM) this.data["maxAppShowToPlayers"] = true;
@@ -36,9 +36,8 @@ export class MomentumTracker extends Application {
     }
 
     static renderApTracker() {
-        if (MomentumTracker._instance) {
+        if (MomentumTracker._instance)
             MomentumTracker._instance.render(true);
-        }
     }
 
     activateListeners(html) {
@@ -71,8 +70,29 @@ export class MomentumTracker extends Application {
         })
     }
 
+    static async adjustAP(type, diff) {
+        diff = Math.round(diff);
+
+        if (!game.user.isGM) {
+            game.socket.emit('system.flagship2d20', {
+                operation: 'adjustAP',
+                data: { diff, type },
+            });
+            return;
+        }
+
+        let momentum = game.settings.get('flagship2d20', type);
+        momentum += diff;
+
+        this.setAP(type, momentum);
+    }
+
     static async setAP(type, value) {
         value = Math.round(value);
+
+        console.log("**** PARKER **** HERE");
+        console.log(game.socket);
+
         if (!game.user.isGM) {
             game.socket.emit('system.flagship2d20', {
                 operation: 'setAP',
@@ -116,8 +136,12 @@ Hooks.once("ready", () => {
     let ap = new MomentumTracker();
     MomentumTracker.renderApTracker();
     game.socket.on("system.flagship2d20", (ev) => {
+        if (ev.operation === "adjustAP") {
+            //if (game.user.isGM)
+                MomentumTracker.adjustAP(ev.data.type, ev.data.diff);
+        }
         if (ev.operation === "setAP") {
-            if (game.user.isGM)
+            //if (game.user.isGM)
                 MomentumTracker.setAP(ev.data.type, ev.data.value);
         }
         if (ev.operation === "updateAP") MomentumTracker.updateAP();
